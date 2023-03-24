@@ -1,1 +1,1 @@
-Sitemap: https://tri3devopteam.github.io/DevOps/sitemap.xml
+Sitemap: https://tri3devopteam.github.io/devops/sitemap.xml

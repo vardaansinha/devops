@@ -6,7 +6,7 @@
       "page0": {
           "title": "",
           "content": "Objectives . Blogs .",
-          "url": "https://tri3devopteam.github.io/DevOps/",
+          "url": "https://tri3devopteam.github.io/devops/",
           "relUrl": "/",
           "date": ""
       }
@@ -35,7 +35,7 @@
       ,"page7": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
-          "url": "https://tri3devopteam.github.io/DevOps/robots.txt",
+          "url": "https://tri3devopteam.github.io/devops/robots.txt",
           "relUrl": "/robots.txt",
           "date": ""
       }
