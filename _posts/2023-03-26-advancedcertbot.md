@@ -1,0 +1,44 @@
+---
+toc: true
+layout: post
+description: Advanced Security Certbot
+categories: [markdown]
+title: Advanced Security Certbot
+---
+
+Certbot is a software run in **Python**. It is meant to convert HTTP sites to work with HTTPS, which is much more secure. 
+
+Let's first explore the background of HTTP to HTTPS:
+
+HTTPS and HTTP are almost essentially the same protocols, but HTTPS uses SSL to encrypt the requests and responses. 
+
+Furthermore, HTTPS is also used in the form of SSL certificates used to encrypt and digitally sign these requests. 
+
+HTTP runs on port 80, and is an incredibly insecure platform to run a site on. HTTPS runs on ports 80 and 443, and needs a Certification Authority signature for the SSL certificate being used on the https site. 
+
+
+**APPLICATION IN CSP, PROS/CONS**
+
+During Trimester 1, while initially setting up our AWS deployment, we attempted to implement Let's Encrypt, a certificate authority manager, along with Certbot. 
+
+
+The Certbot configuration is relatively easy: as shown in Trimester 1, you have to install a couple of packages, create the certbot folders on the AWS deployment server, and activate HTTPS for your domain. 
+
+
+Though it is relatively easy to use, we decided to weigh out some of the pros/cons of using Let's Encrypt & Certbot:
+
+PROS:
+
+1. Let's Encrypt is a free service. 
+
+2. It is issued very efficiently.
+
+3. It is something that most of our students are already familiar with, so it is a smoother process to setup.
+
+CONS:
+
+1. Certificates have to be replaced/renewed every 90 days. This can be a painful process, especially for multiple sites and groups to do.
+
+2. Some domains block Let's Encrypt, and have relationships with other SSL providers. 
+
+3. It is a platform that is vulnerable to malware attacks. Almost 15 thousand Let's Encrypt certificates have been issued to phishing sites. Is this another risk that we want to factor in? In our opinion, this is too much to consider and it could be beneficial to look at alternatives.
