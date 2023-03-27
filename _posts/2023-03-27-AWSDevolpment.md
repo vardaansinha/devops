@@ -6,6 +6,7 @@ categories: [markdown, Week 20]
 title: AWS Devolpment
 ---
 
+by: Shivansh Goel
 # AWS Devolpment
 
 ### Basic Terms
