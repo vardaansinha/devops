@@ -2,6 +2,28 @@
   
     
         "post0": {
+            "title": "Duckdns",
+            "content": "toc: true layout: base description: Group Hacks categories: [markdown, Week 20] title: AWS Devolpment — . To Create a DNS Server on DuckDNS | .",
+            "url": "https://tri3devopteam.github.io/devops/2023/03/27/DuckDNS.html",
+            "relUrl": "/2023/03/27/DuckDNS.html",
+            "date": " • Mar 27, 2023"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "AWS Devolpment",
+            "content": "AWS Devolpment . Basic Terms . EC2: Amazon Web Services is a cloud computing platform that the PUSD district has provided for their students to serve our Web Application. | GitHub: The leading open platform to share a code across the Internet. Docker and docker-compose: Used to host a Web Application. A Docker container prepares an environment that contains the Web Application code and all the dependencies (requirements.txt for Python) Docker is an open platform for developing, shipping, and running applications. | Nginx: In order to find a Web Application on a server, there needs to be a process that listens for the Web Application request and directs it to the Web Application service. Nginx is an open source software for web serving, reverse proxy, caching, load balancing, media streaming, and more. | Certbot: Web traffic on internet is reliably served over Secure Hyper Text Transfer Protocol (https). Certbot is a free, open source software tool for automatically using Let’s Encrypt certifications. | DNS: Natively, the web works off of IP addresses. Domain Name Services (DNS) allows the assignment of a friendly name to a Web Server. This name is built into Nginx/Certbot configuration files. Freenom is the cloud service described in this blog and has been used to register the nighthawkcodingsociety.com domain | . Setting up the Server and Cloning the Project . First connect to an Ubuntu EC2 instance on AWS and then begin the system and software setup. | Once you get in the server, then you must start the upgrade, update, and delete process. Some commands include: sudo apt-get update, sudo apt-get upgrade | Clone and Change Directory to project location. After all the update and upgrade commands are completed then clone the project in a single directory and change the directory to which the place is located | After the flask server has been put in the server then check if it can run through various commands: python main.py After running the command: “python main.py” It should say muliple stuff like “Debbuger Pin Activated” and a Link will show up | .",
+            "url": "https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html",
+            "relUrl": "/markdown/week%2020/2023/03/27/AWSDevolpment.html",
+            "date": " • Mar 27, 2023"
+        }
+        
+    
+  
+    
+        ,"post2": {
             "title": "KASM Intro Guide",
             "content": "What is KASM? . In the words of the KASM co-director: . “KASM Workspaces delivers interactive access to GUI applications and desktop environments running in docker containers. The containers are streamed directly to the browser. The platform is similar to Citrix and VMware Horizon, but entirely container based.” . Essentially, KASM allows you to stream applications from docker containers. . Functionality Link: . KASM Functionalities . There are many different types of workspaces that KASM offers, such as: . Desktop Workspaces: Here, you can get desktop access in a moment of seconds from any device and from anywhere around the world. It is done in a secure manner through whichever web browser you like. | Functionality Demo: . Web Isolation Workspaces: There is a “zero-trust browser isolation” service. You can launch a private web browsing instance, where there is “no risk of compromising your endpoint.” | Functionality Demo: . Application Workspace (App Streaming): This is the main workspace which we are going to focus on. This workspace allows for an application container where the KASM platform does most of the heavylifting for us. It is customizable, open source, and kept up to date. You can choose either a server or cloud deployment option, and you can manage your own Self-Hosted Server in a separate version type created for this situation. | There are three different option plans for KASM: . Community Plan: Offers all enterprise features, and it is for personal use. You get community support, but there is a 5 concurrent session limit. . | Professional Plan: This is a $5 user/month plan. You get next business day support with this plan and a higher session limit. . | Their recommended plan, the Enterprise Plan: This is a $10 user/month plan, where you can get same business day support with all of the supported professional plan features. . |",
             "url": "https://tri3devopteam.github.io/devops/markdown/2023/03/26/kasm.html",
@@ -12,7 +34,7 @@
     
   
     
-        ,"post1": {
+        ,"post3": {
             "title": "Certbot",
             "content": "– toc: true layout: post description: Advanced Security Certbot categories: [markdown] title: Advanced Security Certbot — Certbot is a software run in Python. It is meant to convert HTTP sites to work with HTTPS, which is much more secure. Let’s first explore the background of HTTP to HTTPS: HTTPS and HTTP are almost essentially the same protocols, but HTTPS uses SSL to encrypt the requests and responses. Furthermore, HTTPS is also used in the form of SSL certificates used to encrypt and digitally sign these requests. HTTP runs on port 80, and is an incredibly insecure platform to run a site on. HTTPS runs on ports 80 and 443, and needs a Certification Authority signature for the SSL certificate being used on the https site. APPLICATION IN CSP, PROS/CONS During Trimester 1, while initially setting up our AWS deployment, we attempted to implement Let’s Encrypt, a certificate authority manager, along with Certbot. The Certbot configuration is relatively easy: as shown in Trimester 1, you have to install a couple of packages, create the certbot folders on the AWS deployment server, and activate HTTPS for your domain. Though it is relatively easy to use, we decided to weigh out some of the pros/cons of using Let’s Encrypt &amp; Certbot: PROS: . Let’s Encrypt is a free service. | It is issued very efficiently. | It is something that most of our students are already familiar with, so it is a smoother process to setup. CONS: | Certificates have to be replaced/renewed every 90 days. This can be a painful process, especially for multiple sites and groups to do. | Some domains block Let’s Encrypt, and have relationships with other SSL providers. | It is a platform that is vulnerable to malware attacks. Almost 15 thousand Let’s Encrypt certificates have been issued to phishing sites. Is this another risk that we want to factor in? In our opinion, this is too much to consider and it could be beneficial to look at alternatives. |",
             "url": "https://tri3devopteam.github.io/devops/2023/03/26/certbot.html",

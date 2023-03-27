@@ -4,20 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>DevOps FastPages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>AWS Devolpment | DevOps FastPages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="DevOps FastPages" />
+<meta property="og:title" content="AWS Devolpment" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://tri3devopteam.github.io/devops/" />
-<meta property="og:url" content="https://tri3devopteam.github.io/devops/" />
+<meta name="description" content="Group Hacks" />
+<meta property="og:description" content="Group Hacks" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html" />
 <meta property="og:site_name" content="DevOps FastPages" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="DevOps FastPages" />
+<meta property="twitter:title" content="AWS Devolpment" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"DevOps FastPages","name":"DevOps FastPages","url":"https://tri3devopteam.github.io/devops/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-27T00:00:00-05:00","datePublished":"2023-03-27T00:00:00-05:00","description":"Group Hacks","headline":"AWS Devolpment","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html"},"url":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps FastPages" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -58,66 +59,27 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h2 id="blogs">Blogs</h2>
+        <h1 id="aws-devolpment">AWS Devolpment</h1>
 
+<h3 id="basic-terms">Basic Terms</h3>
+<ul>
+  <li>EC2: Amazon Web Services is a cloud computing platform that the PUSD district has provided for their students to serve our Web Application.</li>
+  <li>GitHub: The leading open platform to share a code across the Internet.
+Docker and docker-compose: Used to host a Web Application. A Docker container prepares an environment that contains the Web Application code and all the dependencies (requirements.txt for Python) Docker is an open platform for developing, shipping, and running applications.</li>
+  <li>Nginx: In order to find a Web Application on a server, there needs to be a process that listens for the Web Application request and directs it to the Web Application service. Nginx is an open source software for web serving, reverse proxy, caching, load balancing, media streaming, and more.</li>
+  <li>Certbot: Web traffic on internet is reliably served over Secure Hyper Text Transfer Protocol (https). Certbot is a free, open source software tool for automatically using Let’s Encrypt certifications.</li>
+  <li>DNS: Natively, the web works off of IP addresses. Domain Name Services (DNS) allows the assignment of a friendly name to a Web Server. This name is built into Nginx/Certbot configuration files. Freenom is the cloud service described in this blog and has been used to register the nighthawkcodingsociety.com domain</li>
+</ul>
 
+<h3 id="setting-up-the-server-and-cloning-the-project">Setting up the Server and Cloning the Project</h3>
+<ul>
+  <li>First connect to an Ubuntu EC2 instance on AWS and then begin the system and software setup.</li>
+  <li>Once you get in the server, then you must start the upgrade, update, and delete process. Some commands include: sudo apt-get update, sudo apt-get upgrade</li>
+  <li>Clone and Change Directory to project location. After all the update and upgrade commands are completed then clone the project in a single directory and change the directory to which the place is located</li>
+  <li>After the flask server has been put in the server then check if it can run through various commands: python main.py
+After running the command: “python main.py” It should say muliple stuff like “Debbuger Pin Activated” and a Link will show up</li>
+</ul>
 
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/devops/2023/03/27/DuckDNS.html">
-            Duckdns
-          </a>
-        </h3>
-        <p class="post-meta-description"></p>
-          <p class="post-meta">Mar 27, 2023</p>
-      </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/devops/markdown/week%2020/2023/03/27/AWSDevolpment.html">
-            AWS Devolpment
-          </a>
-        </h3>
-        <p class="post-meta-description">Group Hacks</p>
-          <p class="post-meta">Mar 27, 2023</p>
-      </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/devops/markdown/2023/03/26/kasm.html">
-            KASM Intro Guide
-          </a>
-        </h3>
-        <p class="post-meta-description">KASM Intro Guide</p>
-          <p class="post-meta">Mar 26, 2023</p>
-      </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/devops/2023/03/26/certbot.html">
-            Certbot
-          </a>
-        </h3>
-        <p class="post-meta-description"></p>
-          <p class="post-meta">Mar 26, 2023</p>
-      </div>
-  </div></li></ul>
-
-    </div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/devops/"></data>
