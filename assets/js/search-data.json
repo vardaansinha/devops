@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "KASM intro guide",
+            "content": "What is KASM? . From the KASM codirector: . &quot;Kasm Workspaces delivers interactive access to GUI applications and desktop environments running in docker containers. The containers are streamed directly to the browser. The platform is similar to Citrix and VMware Horizon, but entirely container based.&quot; . what Kasm essentially does is allow you to stream applications from docker containers . demolink .",
+            "url": "https://tri3devopteam.github.io/devops/2023/03/26/kasm.html",
+            "relUrl": "/2023/03/26/kasm.html",
+            "date": " • Mar 26, 2023"
+        }
+        
+    
+  
 
   
   
-      "page0": {
+      ,"page0": {
           "title": "",
-          "content": "Objectives . Blogs .",
+          "content": "Blogs .",
           "url": "https://tri3devopteam.github.io/devops/",
           "relUrl": "/",
           "date": ""
