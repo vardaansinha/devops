@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Duck DNS | DevOps FastPages</title>
+<title>Duck DNS (Shaurya Goel) | DevOps FastPages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Duck DNS" />
+<meta property="og:title" content="Duck DNS (Shaurya Goel)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Group Hacks" />
-<meta property="og:description" content="Group Hacks" />
+<meta name="description" content="Duck DNS Guide by Shaurya Goel" />
+<meta property="og:description" content="Duck DNS Guide by Shaurya Goel" />
 <link rel="canonical" href="https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html" />
 <meta property="og:url" content="https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html" />
 <meta property="og:site_name" content="DevOps FastPages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Duck DNS" />
+<meta property="twitter:title" content="Duck DNS (Shaurya Goel)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-27T00:00:00-05:00","datePublished":"2023-03-27T00:00:00-05:00","description":"Group Hacks","headline":"Duck DNS","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html"},"url":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-27T00:00:00-05:00","datePublished":"2023-03-27T00:00:00-05:00","description":"Duck DNS Guide by Shaurya Goel","headline":"Duck DNS (Shaurya Goel)","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html"},"url":"https://tri3devopteam.github.io/devops/markdown/week%2020/2023/03/27/DuckDNS.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps FastPages" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -59,7 +59,23 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h3 id="duck-dns">Duck DNS</h3>
+        <h3 id="how-does-duck-dns-work">How does Duck DNS Work?</h3>
+
+<p>Duck DNS is a free dynamic DNS service that allows users to assign a domain name to a dynamic IP address. Dynamic DNS (DDNS) is a system used to map a domain name to an IP address that may change frequently, such as the IP address assigned by an ISP to a residential or small business internet connection.</p>
+
+<p>Once the client program is set up, it will periodically send an update to the Duck DNS servers with your current IP address. When someone tries to access your domain name, the DNS server will resolve the domain name to your current IP address, allowing the requester to connect to your device.</p>
+
+<p>Overall, Duck DNS provides a convenient way to access your home network or devices from anywhere in the world, even if your ISP assigns you a dynamic IP address</p>
+
+<h3 id="how-is-duck-dns-useful-for-our-project-other-projects-in-general">How is Duck DNS useful for our project? Other Projects in General?</h3>
+
+<p>In general, Duck DNS can be useful for projects that involve remote access or control of a device, such as setting up a home security camera, remote desktop access, or hosting a website or game server from a home network. By using Duck DNS, the device or service can be accessed using a static hostname, which is more convenient than having to remember or constantly look up the device’s changing IP address.</p>
+
+<p>In addition, Duck DNS is easy to set up and does not require any special hardware or software. It can be configured to update the IP address automatically, making it a reliable and low-maintenance solution for dynamic IP addresses.</p>
+
+<p>Overall, Duck DNS is a useful tool for any project that requires a static hostname for remote access or control of a device or service.</p>
+
+<h3 id="steps-for-setup">Steps for Setup</h3>
 <ul>
   <li>Sign up for a DuckDNS account by visiting https://www.duckdns.org/ and selecting “Create Account.”</li>
   <li>Once you have created an account, you will be prompted to create a subdomain. Enter a unique name for your subdomain, and then click the “Add Domain” button.</li>
