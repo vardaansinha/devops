@@ -7,11 +7,10 @@ title: Big Idea Redo and Apology
 ---
 
 # Picture of the Quiz
-![]({{site.baseurl}}/../images/copyofbigidea2.png "Overall Picture")
+![]({{site.baseurl}}/images/copyofbigidea2.PNG "https://github.com/fastai/fastpages")
 
 ### Problem 2
-![]({{site.baseurl}}/images/copyofbigideapic2.png "Question 2")
-
+![]({{site.baseurl}}/images/copyofbigidea2pic1.PNG "https://github.com/fastai/fastpages")
 What I got wrong ofr Problem 2 was that I mixed up lossless nad lossy, which is a big mistake. If I knew the difference then that would make the decision to get the question correctly.
 
 
