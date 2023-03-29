@@ -10,7 +10,7 @@ title: Big Idea Redo and Apology
 ![]({{site.baseurl}}/images/copyofbigidea2.PNG "https://github.com/fastai/fastpages")
 
 ### Problem 2
-![]({{site.baseurl}}/images/copyofbigidea2pic1.PNG "https://github.com/fastai/fastpages")
+![]({{site.baseurl}}/images/copyofbigidideapic1.PNG "https://github.com/fastai/fastpages")
 What I got wrong ofr Problem 2 was that I mixed up lossless nad lossy, which is a big mistake. If I knew the difference then that would make the decision to get the question correctly.
 
 
@@ -19,4 +19,5 @@ What I got wrong ofr Problem 2 was that I mixed up lossless nad lossy, which is 
 
 For Problem # 6, I got the answers of A and C, but the correct answers was A and D. Which means that I got 50% correct on that problem. To improve in the future I will make sure to read the question more carefully and do not make the same mistake that I did before.
 
-### Problem 
+### Problem  21
+
