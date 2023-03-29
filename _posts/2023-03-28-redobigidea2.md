@@ -23,7 +23,7 @@ For Problem # 6, I got the answers of A and C, but the correct answers was A and
 ![]({{site.baseurl}}/images/copyofbigideapic4.PNG "Question 2")
 
 
-For Problem # 21 What I did wrong was that I did not 
+For Problem # 21 What I did wrong was that I selected only one of the correct answers and did not focus on the others. What I learned from this is that it is important to focus on all of the options and read the directions carefully.
 
 
 
