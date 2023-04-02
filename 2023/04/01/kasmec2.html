@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="running docker containers through kasm for added security" />
 <meta property="og:description" content="running docker containers through kasm for added security" />
-<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/03/31/kasmec2.html" />
-<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/03/31/kasmec2.html" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/04/01/kasmec2.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/04/01/kasmec2.html" />
 <meta property="og:site_name" content="DevOps FastPages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-31T00:00:00-05:00" />
+<meta property="article:published_time" content="2023-04-01T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="kasm virtual machine EC2 guide" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-31T00:00:00-05:00","datePublished":"2023-03-31T00:00:00-05:00","description":"running docker containers through kasm for added security","headline":"kasm virtual machine EC2 guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/03/31/kasmec2.html"},"url":"https://tri3devopteam.github.io/devops/2023/03/31/kasmec2.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-01T00:00:00-05:00","datePublished":"2023-04-01T00:00:00-05:00","description":"running docker containers through kasm for added security","headline":"kasm virtual machine EC2 guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/04/01/kasmec2.html"},"url":"https://tri3devopteam.github.io/devops/2023/04/01/kasmec2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps FastPages" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -62,8 +62,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">kasm virtual machine EC2 guide</h1><p class="page-description">running docker containers through kasm for added security</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-31T00:00:00-05:00" itemprop="datePublished">
-        Mar 31, 2023
+    <h1 class="post-title p-name" itemprop="name headline">kasm virtual machine EC2 guide</h1><p class="page-description">running docker containers through kasm for added security</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-01T00:00:00-05:00" itemprop="datePublished">
+        Apr 1, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -175,11 +175,47 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>afterwards, the console will print out some credentials that you MUST save somewhere for logging in later.</p>
+<p>If your PC does not have a swap file, you will need to create one immediately after installing KASM</p>
+<p>simply run the following commands in terminal:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">sudo</span> <span class="n">bash</span> <span class="n">kasm_release</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">accept</span><span class="o">-</span><span class="n">eula</span> <span class="o">--</span><span class="n">swap</span><span class="o">-</span><span class="n">size</span> <span class="mi">4096</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After all the installation, you can access your KASM VM by going to the ip address you set up KASM on. From there, you must log in as admin, which will allow you to manage enviorments and workspaces</p>
+<p>If you want to run a program in the VM, click on workspaces and just run the program you want to run from the menu.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
 
-  </div><a class="u-url" href="/devops/2023/03/31/kasmec2.html" hidden></a>
+  </div><a class="u-url" href="/devops/2023/04/01/kasmec2.html" hidden></a>
 </article>
 
       </div>
