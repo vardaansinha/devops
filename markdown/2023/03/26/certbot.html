@@ -68,7 +68,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -86,6 +86,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#to-install-and-setup-certbot-follow-these-instructions">To install and setup Certbot follow these instructions:</a></li>
 </ul><p>Certbot is a software run in <strong>Python</strong>. It is meant to convert HTTP sites to work with HTTPS, which is much more secure.
 Let’s first explore the background of HTTP to HTTPS:
 HTTPS and HTTP are almost essentially the same protocols, but HTTPS uses SSL to encrypt the requests and responses.
@@ -104,6 +105,30 @@ CONS:</li>
   <li>Certificates have to be replaced/renewed every 90 days. This can be a painful process, especially for multiple sites and groups to do.</li>
   <li>Some domains block Let’s Encrypt, and have relationships with other SSL providers.</li>
   <li>It is a platform that is vulnerable to malware attacks. Almost 15 thousand Let’s Encrypt certificates have been issued to phishing sites. Is this another risk that we want to factor in? In our opinion, this is too much to consider and it could be beneficial to look at alternatives.</li>
+</ol>
+
+<h1 id="to-install-and-setup-certbot-follow-these-instructions">
+<a class="anchor" href="#to-install-and-setup-certbot-follow-these-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>To install and setup Certbot follow these instructions:</h1>
+
+<ol>
+  <li>
+    <p>Install Certbot through the terminal with the following command
+sudo apt-get install certbot</p>
+  </li>
+  <li>
+    <p>Next we have to choose a plugin to obtain and install the certificates. For Apache web servers, you can use the following command. If you are using a different browser engine, you can choose the corresponding plugin for that browser engine.
+sudo certbot –apache</p>
+  </li>
+  <li>
+    <p>Next, you will need to follow the given prompts and certbot will help us set the rest up. You will need to enter your email address.</p>
+  </li>
+  <li>
+    <p>Now you have to verify the installation and you can check if it’s working by checking the website in your browser, or using a tool such as SSL Labs, which can check for an SSL certificate.</p>
+  </li>
+  <li>
+    <p>Now you have to ensure that your certbot will continue working with minimum maintenance. You can do this by making the certificate auto renew using this command.
+sudo certbot renew</p>
+  </li>
 </ol>
 
 
