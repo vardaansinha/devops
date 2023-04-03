@@ -68,7 +68,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -218,6 +218,104 @@ Amazon DynamoDB is a NoSQL database that can handle large amounts of data and is
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Code-example:-Source-Geeks4Geeks.com">Code example: Source Geeks4Geeks.com<a class="anchor-link" href="#Code-example:-Source-Geeks4Geeks.com"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># create an RDS client</span>
+<span class="n">rds</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;rds&#39;</span><span class="p">)</span>
+
+<span class="c1"># create a database instance</span>
+<span class="n">db_instance_identifier</span> <span class="o">=</span> <span class="s1">&#39;mydbinstance&#39;</span>
+<span class="n">db_instance_class</span> <span class="o">=</span> <span class="s1">&#39;db.t2.micro&#39;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="s1">&#39;mysql&#39;</span>
+<span class="n">master_username</span> <span class="o">=</span> <span class="s1">&#39;myusername&#39;</span>
+<span class="n">master_password</span> <span class="o">=</span> <span class="s1">&#39;mypassword&#39;</span>
+<span class="n">allocated_storage</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">rds</span><span class="o">.</span><span class="n">create_db_instance</span><span class="p">(</span>
+    <span class="n">DBInstanceIdentifier</span><span class="o">=</span><span class="n">db_instance_identifier</span><span class="p">,</span>
+    <span class="n">DBInstanceClass</span><span class="o">=</span><span class="n">db_instance_class</span><span class="p">,</span>
+    <span class="n">Engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+    <span class="n">MasterUsername</span><span class="o">=</span><span class="n">master_username</span><span class="p">,</span>
+    <span class="n">MasterUserPassword</span><span class="o">=</span><span class="n">master_password</span><span class="p">,</span>
+    <span class="n">AllocatedStorage</span><span class="o">=</span><span class="n">allocated_storage</span>
+<span class="p">)</span>
+
+<span class="c1"># wait for the instance to become available</span>
+<span class="n">rds</span><span class="o">.</span><span class="n">get_waiter</span><span class="p">(</span><span class="s1">&#39;db_instance_available&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span>
+    <span class="n">DBInstanceIdentifier</span><span class="o">=</span><span class="n">db_instance_identifier</span>
+<span class="p">)</span>
+
+<span class="c1"># create a database connection</span>
+<span class="kn">import</span> <span class="nn">mysql.connector</span>
+
+<span class="n">cnx</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mydbinstance.cquf123456.us-west-2.rds.amazonaws.com&#39;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;myusername&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;mypassword&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;mydatabase&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># create a table</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">cnx</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="n">table_query</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;CREATE TABLE IF NOT EXISTS users (&quot;</span>
+    <span class="s2">&quot; id INT AUTO_INCREMENT PRIMARY KEY,&quot;</span>
+    <span class="s2">&quot; name VARCHAR(255),&quot;</span>
+    <span class="s2">&quot; email VARCHAR(255)&quot;</span>
+    <span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">table_query</span><span class="p">)</span>
+
+<span class="c1"># insert data</span>
+<span class="n">insert_query</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, email) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)&quot;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_query</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># query data</span>
+<span class="n">select_query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users&quot;</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_query</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="c1"># close the cursor and connection</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">cnx</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># delete the database instance</span>
+<span class="n">rds</span><span class="o">.</span><span class="n">delete_db_instance</span><span class="p">(</span>
+    <span class="n">DBInstanceIdentifier</span><span class="o">=</span><span class="n">db_instance_identifier</span><span class="p">,</span>
+    <span class="n">SkipFinalSnapshot</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># wait for the instance to be deleted</span>
+<span class="n">rds</span><span class="o">.</span><span class="n">get_waiter</span><span class="p">(</span><span class="s1">&#39;db_instance_deleted&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span>
+    <span class="n">DBInstanceIdentifier</span><span class="o">=</span><span class="n">db_instance_identifier</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
