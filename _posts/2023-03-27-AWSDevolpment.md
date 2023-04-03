@@ -23,3 +23,11 @@ Docker and docker-compose: Used to host a Web Application. A Docker container pr
 - Clone and Change Directory to project location. After all the update and upgrade commands are completed then clone the project in a single directory and change the directory to which the place is located
 - After the flask server has been put in the server then check if it can run through various commands: python main.py
 After running the command: "python main.py" It should say muliple stuff like "Debbuger Pin Activated" and a Link will show up
+
+###  Create Dockerfile to run Web Service
+- Edit the DockerFIle and add "CMD [ "gunicorn", "main:app" ]" at the end of the code
+- Edit the dcoker-compose.yml file and edit the flask_port and docker file location
+
+
+### Are there any outdated Nginx/Docker functionalities to address?
+- As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
