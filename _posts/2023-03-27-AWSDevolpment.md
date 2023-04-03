@@ -31,3 +31,6 @@ After running the command: "python main.py" It should say muliple stuff like "De
 
 ### Are there any outdated Nginx/Docker functionalities to address?
 - As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
+
+### Is there anything unclear that we need to communicate further to the students for deployment?
+There is nothing unclear that needs to be communicated further except for the usage of the DuckDNS for the DNS Account and Server
