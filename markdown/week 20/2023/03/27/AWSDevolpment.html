@@ -81,6 +81,17 @@ Docker and docker-compose: Used to host a Web Application. A Docker container pr
 After running the command: “python main.py” It should say muliple stuff like “Debbuger Pin Activated” and a Link will show up</li>
 </ul>
 
+<h3 id="create-dockerfile-to-run-web-service">Create Dockerfile to run Web Service</h3>
+<ul>
+  <li>Edit the DockerFIle and add “CMD [ “gunicorn”, “main:app” ]” at the end of the code</li>
+  <li>Edit the dcoker-compose.yml file and edit the flask_port and docker file location</li>
+</ul>
+
+<h3 id="are-there-any-outdated-nginxdocker-functionalities-to-address">Are there any outdated Nginx/Docker functionalities to address?</h3>
+<ul>
+  <li>As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run “sudo apt-get update”, and “‘sudo apt-get upgrade”</li>
+</ul>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/devops/"></data>
