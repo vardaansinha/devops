@@ -50,13 +50,13 @@ List specification of your Computer, or Computers if working as Pair/Trio
 
 - Complete True of False Questions
 
-1. **TRUE: Open standards and protocols enable different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the internet.**
-2. **FALSE: IETF is a task force used to enforce laws to keep manufacturers out of the internet.**
-3. **FALSE: Routes are determined in advance and are not flexible.**
-4. **TRUE: A protocol is an agreed-upon set of rules that specify the behavior of a system.**
-5. **FALSE: UDP guarantees transfers and is faster.**
-6. **FALSE: The World Wide Web is the internet.**
-7. **TRUE: HTTP is a protocol used by the World Wide Web.**
+1. TRUE: Open standards and protocols enable different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the internet.**
+2. FALSE: IETF is a task force used to enforce laws to keep manufacturers out of the internet.**
+3. FALSE: Routes are determined in advance and are not flexible.**
+4. TRUE: A protocol is an agreed-upon set of rules that specify the behavior of a system.**
+5.FALSE: UDP guarantees transfers and is faster.**
+6. FALSE: The World Wide Web is the internet.**
+7. TRUE: HTTP is a protocol used by the World Wide Web.**
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
     - Access to the internet depends on the ability to connect a computing device to an internet connected device.
