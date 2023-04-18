@@ -23,8 +23,7 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - Storage in GB: **534 GB**
 - OS: **Microsoft Windows**
 
-
-![]({{site.baseurl}}/images/importnatdrawing1.PNG.png "Diagram")
+![]({{site.baseurl}}/images/importnatdrawing1.PNG "https://github.com/fastai/fastpages")
 
 
 ### The Internet
@@ -76,8 +75,7 @@ List specification of your Computer, or Computers if working as Pair/Trio
 
 - Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
 
-![]({{site.baseurl}}/images/diagmra2.PNG "Diagram")
-
+![]({{site.baseurl}}/images/diagmra2.PNG "https://github.com/fastai/fastpages")
 
 
 
