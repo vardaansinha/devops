@@ -110,7 +110,7 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
-**The network activity was a very good method of practice to analyzing certain networks with tens of routes and checking whether or not they are fault-tolerant. Essentially, fault tolerance means that in a network of many different sources and destinations, if one route goes down, there is still redundancy and the network has an ability to go from the original source to destination. There is not only one path from A to B, so if that one path goes down, there are more routes that A can go through to eventually reach B.**
+
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
