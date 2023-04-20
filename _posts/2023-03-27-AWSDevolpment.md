@@ -9,24 +9,64 @@ title: AWS Devolpment
 by: Shivansh Goel
 # AWS Devolpment
 
-### Basic Terms
-- EC2: Amazon Web Services is a cloud computing platform that the PUSD district has provided for their students to serve our Web Application.
-- GitHub: The leading open platform to share a code across the Internet.
-Docker and docker-compose: Used to host a Web Application. A Docker container prepares an environment that contains the Web Application code and all the dependencies (requirements.txt for Python) Docker is an open platform for developing, shipping, and running applications.
-- Nginx: In order to find a Web Application on a server, there needs to be a process that listens for the Web Application request and directs it to the Web Application service. Nginx is an open source software for web serving, reverse proxy, caching, load balancing, media streaming, and more.
-- Certbot: Web traffic on internet is reliably served over Secure Hyper Text Transfer Protocol (https). Certbot is a free, open source software tool for automatically using Let’s Encrypt certifications.
-- DNS: Natively, the web works off of IP addresses. Domain Name Services (DNS) allows the assignment of a friendly name to a Web Server. This name is built into Nginx/Certbot configuration files. Freenom is the cloud service described in this blog and has been used to register the nighthawkcodingsociety.com domain
-
 ###  Setting up the Server and Cloning the Project
-- First connect to an Ubuntu EC2 instance on AWS and then begin the system and software setup.
-- Once you get in the server, then you must start the upgrade, update, and delete process. Some commands include: sudo apt-get update, sudo apt-get upgrade
-- Clone and Change Directory to project location. After all the update and upgrade commands are completed then clone the project in a single directory and change the directory to which the place is located
-- After the flask server has been put in the server then check if it can run through various commands: python main.py
-After running the command: "python main.py" It should say muliple stuff like "Debbuger Pin Activated" and a Link will show up
 
-###  Create Dockerfile to run Web Service
-- Edit the DockerFIle and add "CMD [ "gunicorn", "main:app" ]" at the end of the code
-- Edit the dcoker-compose.yml file and edit the flask_port and docker file location
+#### Deployment Process:
+- First connect to an Ubuntu EC2 instance on AWS and then begin the system and software setup.
+
+### Update and Upgrade  the System
+- sudo apt update sudo apt upgrade
+- sudo apt install docker
+- sudo apt install docker-compose -y
+- sudo apt install html2text
+- sudo apt install python3-pip nginx
+- sudo pip3 install virtualenv
+
+###  Clone and Change Directory to project location
+Clone your gitserver into a directory of your choosing
+- git clone https://github.com/yourgitserver
+
+### Making sure that the Web Service can Run
+To make sure that the Web Serbice to running properly
+- Run the main.py file and see if the server is able to run
+If there are some errors, try running the command:
+- pip install -r requirements.txt
+
+###  Make sure that there is a Dockerifle or that it is up to Date
+- Edit the Dockerfile: sudo nano Dockerfile
+Make sure that it looks like something like this:
+
+
+FROM docker.io/python:3.9
+WORKDIR /app
+# --- Update environment and install python and pip ---
+RUN apt-get update && apt-get upgrade -y && \
+  apt-get install -y python3 python3-pip git
+# --- Copy repo you updated with clone or pull ---
+COPY . /app
+# --- Install project specific dependencies ---
+RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install gunicorn
+# --- Setup args to run 3 workers and run on port 8080 ---
+ENV GUNICORN_CMD_ARGS="--workers=3 --bind=0.0.0.0:8080"
+# --- Allow port 8080 to be accessed by system ---
+EXPOSE 8080
+# --- Run Web Application in production style ---
+CMD [ "gunicorn", "main:app" ]
+
+
+### Make sure that the docker-compose.yml is up to dagte
+- Edit the docker-compose.yml file and edit the flask_port, volumes, and the image
+
+### Start Running Docker
+- sudo apt install docker
+- sudo apt install docker-compose -y
+- sudo docker-compose up -d
+- It should complete 9 steps of procesess to confirm that it is complete
+
+### Make sure to Verify that the Web Application is working with Docker
+- docker-compose ps
+Make sure you find the application that matches the application name and ports. If you can't find them that means that you did something wrong and that you should go back to finish other steps.
 
 
 ### Testing Localpoint
@@ -40,8 +80,44 @@ Prerequisites:
 Installing Nginx
 - Run the command to make sure that Nginx is installed within the system: sudo apt install nginx
 Move to /etc/nginx/sites-available whichis where the Nginx Server Configuration Files are located
-- Create your own file in the thing
+- Create your own configuration in the directory with a name of your choosing (sudo nano example)
+- Add these stuff to the Nginx Configuration File:
+server {
+    listen 80;
+    listen [::]:80;
+    server_name 3.233.212.71;
 
+    location / {
+        proxy_pass http://localhost:8086;
+        # Simple requests
+        if ($request_method ~* "(GET|POST)") {
+                add_header "Access-Control-Allow-Origin"  *;
+        }
+
+        # Preflight requests
+        if ($request_method = OPTIONS ) {
+                add_header "Access-Control-Allow-Origin"  *;
+                add_header "Access-Control-Allow-Methods" "GET, POST, OPTIONS, HEAD";
+                add_header "Access-Control-Allow-Headers" "Authorization, Origin, X-Requested-With, Content-Type, Accept";
+                return 200;
+        }
+    }
+}
+
+Make sure to edit the server_name (IP Adress), the proxy pass POrt, and the docker-compose
+
+### Activate the NGINX Configuration
+- sudo ln -s /etc/nginx/sites-available/[your config file] /etc/nginx/sites-enabled[your config file]
+- sudo nginx -t
+If there are errors then you must go back and repeat the steps of the NGINX configuration in the sites-available directory and see if there is anything wrong or misplaced.
+
+
+### Last Steps before the Last Steps
+- To Conclude the first part, make sure that the internet is now running your web application:
+Go on the internet and run this: http://(your ip address)
+
+### The Last Steps
+The last Steps involve setting up the DNS Server
 
 ### Are there any outdated Nginx/Docker functionalities to address?
 - As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
