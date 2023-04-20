@@ -62,29 +62,77 @@ window.onload = wrap_img;
         <p>by: Shivansh Goel</p>
 <h1 id="aws-devolpment">AWS Devolpment</h1>
 
-<h3 id="basic-terms">Basic Terms</h3>
-<ul>
-  <li>EC2: Amazon Web Services is a cloud computing platform that the PUSD district has provided for their students to serve our Web Application.</li>
-  <li>GitHub: The leading open platform to share a code across the Internet.
-Docker and docker-compose: Used to host a Web Application. A Docker container prepares an environment that contains the Web Application code and all the dependencies (requirements.txt for Python) Docker is an open platform for developing, shipping, and running applications.</li>
-  <li>Nginx: In order to find a Web Application on a server, there needs to be a process that listens for the Web Application request and directs it to the Web Application service. Nginx is an open source software for web serving, reverse proxy, caching, load balancing, media streaming, and more.</li>
-  <li>Certbot: Web traffic on internet is reliably served over Secure Hyper Text Transfer Protocol (https). Certbot is a free, open source software tool for automatically using Let’s Encrypt certifications.</li>
-  <li>DNS: Natively, the web works off of IP addresses. Domain Name Services (DNS) allows the assignment of a friendly name to a Web Server. This name is built into Nginx/Certbot configuration files. Freenom is the cloud service described in this blog and has been used to register the nighthawkcodingsociety.com domain</li>
-</ul>
-
 <h3 id="setting-up-the-server-and-cloning-the-project">Setting up the Server and Cloning the Project</h3>
+
+<h4 id="deployment-process">Deployment Process:</h4>
 <ul>
   <li>First connect to an Ubuntu EC2 instance on AWS and then begin the system and software setup.</li>
-  <li>Once you get in the server, then you must start the upgrade, update, and delete process. Some commands include: sudo apt-get update, sudo apt-get upgrade</li>
-  <li>Clone and Change Directory to project location. After all the update and upgrade commands are completed then clone the project in a single directory and change the directory to which the place is located</li>
-  <li>After the flask server has been put in the server then check if it can run through various commands: python main.py
-After running the command: “python main.py” It should say muliple stuff like “Debbuger Pin Activated” and a Link will show up</li>
 </ul>
 
-<h3 id="create-dockerfile-to-run-web-service">Create Dockerfile to run Web Service</h3>
+<h3 id="update-and-upgrade--the-system">Update and Upgrade  the System</h3>
 <ul>
-  <li>Edit the DockerFIle and add “CMD [ “gunicorn”, “main:app” ]” at the end of the code</li>
-  <li>Edit the dcoker-compose.yml file and edit the flask_port and docker file location</li>
+  <li>sudo apt update sudo apt upgrade</li>
+  <li>sudo apt install docker</li>
+  <li>sudo apt install docker-compose -y</li>
+  <li>sudo apt install html2text</li>
+  <li>sudo apt install python3-pip nginx</li>
+  <li>sudo pip3 install virtualenv</li>
+</ul>
+
+<h3 id="clone-and-change-directory-to-project-location">Clone and Change Directory to project location</h3>
+<p>Clone your gitserver into a directory of your choosing</p>
+<ul>
+  <li>git clone https://github.com/yourgitserver</li>
+</ul>
+
+<h3 id="making-sure-that-the-web-service-can-run">Making sure that the Web Service can Run</h3>
+<p>To make sure that the Web Serbice to running properly</p>
+<ul>
+  <li>Run the main.py file and see if the server is able to run
+If there are some errors, try running the command:</li>
+  <li>pip install -r requirements.txt</li>
+</ul>
+
+<h3 id="make-sure-that-there-is-a-dockerifle-or-that-it-is-up-to-date">Make sure that there is a Dockerifle or that it is up to Date</h3>
+<ul>
+  <li>Edit the Dockerfile: sudo nano Dockerfile
+Make sure that it looks like something like this:</li>
+</ul>
+
+<p>FROM docker.io/python:3.9
+WORKDIR /app</p>
+<h1 id="-update-environment-and-install-python-and-pip-">— Update environment and install python and pip —</h1>
+<p>RUN apt-get update &amp;&amp; apt-get upgrade -y &amp;&amp; <br />
+  apt-get install -y python3 python3-pip git</p>
+<h1 id="-copy-repo-you-updated-with-clone-or-pull-">— Copy repo you updated with clone or pull —</h1>
+<p>COPY . /app</p>
+<h1 id="-install-project-specific-dependencies-">— Install project specific dependencies —</h1>
+<p>RUN pip3 install –no-cache-dir -r requirements.txt
+RUN pip3 install gunicorn</p>
+<h1 id="-setup-args-to-run-3-workers-and-run-on-port-8080-">— Setup args to run 3 workers and run on port 8080 —</h1>
+<p>ENV GUNICORN_CMD_ARGS=”–workers=3 –bind=0.0.0.0:8080”</p>
+<h1 id="-allow-port-8080-to-be-accessed-by-system-">— Allow port 8080 to be accessed by system —</h1>
+<p>EXPOSE 8080</p>
+<h1 id="-run-web-application-in-production-style-">— Run Web Application in production style —</h1>
+<p>CMD [ “gunicorn”, “main:app” ]</p>
+
+<h3 id="make-sure-that-the-docker-composeyml-is-up-to-dagte">Make sure that the docker-compose.yml is up to dagte</h3>
+<ul>
+  <li>Edit the docker-compose.yml file and edit the flask_port, volumes, and the image</li>
+</ul>
+
+<h3 id="start-running-docker">Start Running Docker</h3>
+<ul>
+  <li>sudo apt install docker</li>
+  <li>sudo apt install docker-compose -y</li>
+  <li>sudo docker-compose up -d</li>
+  <li>It should complete 9 steps of procesess to confirm that it is complete</li>
+</ul>
+
+<h3 id="make-sure-to-verify-that-the-web-application-is-working-with-docker">Make sure to Verify that the Web Application is working with Docker</h3>
+<ul>
+  <li>docker-compose ps
+Make sure you find the application that matches the application name and ports. If you can’t find them that means that you did something wrong and that you should go back to finish other steps.</li>
 </ul>
 
 <h3 id="testing-localpoint">Testing Localpoint</h3>
@@ -110,8 +158,49 @@ Installing Nginx</p>
 <ul>
   <li>Run the command to make sure that Nginx is installed within the system: sudo apt install nginx
 Move to /etc/nginx/sites-available whichis where the Nginx Server Configuration Files are located</li>
-  <li>Create your own file in the thing</li>
+  <li>Create your own configuration in the directory with a name of your choosing (sudo nano example)</li>
+  <li>
+    <p>Add these stuff to the Nginx Configuration File:
+server {
+  listen 80;
+  listen [::]:80;
+  server_name 3.233.212.71;</p>
+
+    <p>location / {
+      proxy_pass http://localhost:8086;
+      # Simple requests
+      if ($request_method ~* “(GET|POST)”) {
+              add_header “Access-Control-Allow-Origin”  *;
+      }</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Preflight requests
+  if ($request_method = OPTIONS ) {
+          add_header "Access-Control-Allow-Origin"  *;
+          add_header "Access-Control-Allow-Methods" "GET, POST, OPTIONS, HEAD";
+          add_header "Access-Control-Allow-Headers" "Authorization, Origin, X-Requested-With, Content-Type, Accept";
+          return 200;
+  }   } }
+</code></pre></div>    </div>
+  </li>
 </ul>
+
+<p>Make sure to edit the server_name (IP Adress), the proxy pass POrt, and the docker-compose</p>
+
+<h3 id="activate-the-nginx-configuration">Activate the NGINX Configuration</h3>
+<ul>
+  <li>sudo ln -s /etc/nginx/sites-available/[your config file] /etc/nginx/sites-enabled[your config file]</li>
+  <li>sudo nginx -t
+If there are errors then you must go back and repeat the steps of the NGINX configuration in the sites-available directory and see if there is anything wrong or misplaced.</li>
+</ul>
+
+<h3 id="last-steps-before-the-last-steps">Last Steps before the Last Steps</h3>
+<ul>
+  <li>To Conclude the first part, make sure that the internet is now running your web application:
+Go on the internet and run this: http://(your ip address)</li>
+</ul>
+
+<h3 id="the-last-steps">The Last Steps</h3>
+<p>The last Steps involve setting up the DNS Server</p>
 
 <h3 id="are-there-any-outdated-nginxdocker-functionalities-to-address">Are there any outdated Nginx/Docker functionalities to address?</h3>
 <ul>
