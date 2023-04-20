@@ -29,6 +29,20 @@ After running the command: "python main.py" It should say muliple stuff like "De
 - Edit the dcoker-compose.yml file and edit the flask_port and docker file location
 
 
+### Testing Localpoint
+To make sure that all the previous steps are running correctly and the everything is going on the right path. You should run these commands to see if there is a success or a failure.
+- curl http://localhost:8086
+If there is a "Failed to connect", then that means that something is not going right and that you should look at the changes you have made in the server.
+- Another command to run would be: curl http://localhost:8086 | html2text
+
+###  Test preparation for Docker Web Application using IP for Internet Access
+Prerequisites:
+Installing Nginx
+- Run the command to make sure that Nginx is installed within the system: sudo apt install nginx
+Move to /etc/nginx/sites-available whichis where the Nginx Server Configuration Files are located
+- Create your own file in the thing
+
+
 ### Are there any outdated Nginx/Docker functionalities to address?
 - As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
 
