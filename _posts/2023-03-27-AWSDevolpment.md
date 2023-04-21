@@ -118,6 +118,8 @@ Go on the internet and run this: http://(your ip address)
 ### The Last Steps
 The last Steps involve setting up the DNS Server
 
+### Video
+
 ### Are there any outdated Nginx/Docker functionalities to address?
 - As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
 
