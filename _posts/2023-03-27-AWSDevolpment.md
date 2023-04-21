@@ -76,8 +76,7 @@ If there is a "Failed to connect", then that means that something is not going r
 - Another command to run would be: curl http://localhost:8086 | html2text
 
 ###  Test preparation for Docker Web Application using IP for Internet Access
-Prerequisites:
-Installing Nginx
+First make sure to install Nginx
 - Run the command to make sure that Nginx is installed within the system: sudo apt install nginx
 Move to /etc/nginx/sites-available whichis where the Nginx Server Configuration Files are located
 - Create your own configuration in the directory with a name of your choosing (sudo nano example)
