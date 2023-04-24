@@ -8,6 +8,9 @@ title: AWS Devolpment
 
 by: Shivansh Goel
 
+![image](https://vardaansinha.github.io/devops/images/awspic.PNG)
+
+
 # Introduction
 ### How does EC2 AWS Work?
 EC2 (Elastic Compute Cloud) is a web service provided by AWS that allows customers to rent virtual machines (VMs) in the cloud to run their applications. EC2 instances can be launched from a variety of pre-configured Amazon Machine Images (AMIs) or custom images uploaded by the user. 
