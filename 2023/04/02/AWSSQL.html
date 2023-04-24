@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Guide to SQLite vs AWS alternate databases | DevOps project for AP CSP</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Guide to SQLite vs AWS alternate databases" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SQLite vs AWS alternate databses" />
+<meta property="og:description" content="SQLite vs AWS alternate databses" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/04/02/AWSSQL.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/04/02/AWSSQL.html" />
+<meta property="og:site_name" content="DevOps project for AP CSP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-02T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Guide to SQLite vs AWS alternate databases" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T00:00:00-05:00","datePublished":"2023-04-02T00:00:00-05:00","description":"SQLite vs AWS alternate databses","headline":"Guide to SQLite vs AWS alternate databases","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/04/02/AWSSQL.html"},"url":"https://tri3devopteam.github.io/devops/2023/04/02/AWSSQL.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps project for AP CSP" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/ezgif.com-webp-to-png.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devops/">DevOps project for AP CSP</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Guide to SQLite vs AWS alternate databases</h1><p class="page-description">SQLite vs AWS alternate databses</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-02T00:00:00-05:00" itemprop="datePublished">
+        Apr 2, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/tri-3-group-fastpages-devops-/tree/master/_notebooks/2023-04-02-AWSSQL.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/devops/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/tri-3-group-fastpages-devops-/master?filepath=_notebooks%2F2023-04-02-AWSSQL.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/tri-3-group-fastpages-devops-/blob/master/_notebooks/2023-04-02-AWSSQL.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftri-3-group-fastpages-devops-%2Fblob%2Fmaster%2F_notebooks%2F2023-04-02-AWSSQL.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/devops/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#What-is-AWS">What is AWS </a></li>
+<li class="toc-entry toc-h1"><a href="#What-is-SQlite">What is SQlite </a></li>
+<li class="toc-entry toc-h1"><a href="#AWS-Vs-SQlite">AWS Vs SQlite </a></li>
+<li class="toc-entry toc-h1"><a href="#AWS-Databases">AWS Databases </a></li>
+<li class="toc-entry toc-h1"><a href="#How-to-set-up-RDS">How to set up RDS </a></li>
+<li class="toc-entry toc-h1"><a href="#Example">Example </a></li>
+<li class="toc-entry toc-h1"><a href="#Quiz">Quiz </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-02-AWSSQL.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-AWS">
+<a class="anchor" href="#What-is-AWS" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is AWS<a class="anchor-link" href="#What-is-AWS"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>AWS offers several alternate databases in addition to their popular managed relational database service (RDS). These alternate databases provide different functionality and are optimized for specific use cases. One such alternate database is Amazon DynamoDB, which is a fast and flexible NoSQL database service that allows users to store and retrieve any amount of data, with  low latency and predictable performance.Another alternate database offered by AWS is Amazon Neptune, which is a fast, reliable, and fully-managed graph database service that makes it easy to build and run applications that work with highly connected datasets.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-SQlite">
+<a class="anchor" href="#What-is-SQlite" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is SQlite<a class="anchor-link" href="#What-is-SQlite"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>SQLite is a widely used embedded database management system that is known for its simplicity, reliability, and ease of use. It is a serverless, self-contained, and transactional database engine that is designed to be embedded into applications rather than run as a standalone server. SQLite databases are stored as files on disk, making them easy to backup, copy, and transport between systems. They support standard SQL syntax and are fully ACID compliant, ensuring data consistency and reliability.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/48000753/234100264-aae81f0a-19b3-4d77-be94-96f68f94c899.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="AWS-Vs-SQlite">
+<a class="anchor" href="#AWS-Vs-SQlite" aria-hidden="true"><span class="octicon octicon-link"></span></a>AWS Vs SQlite<a class="anchor-link" href="#AWS-Vs-SQlite"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>SQLite is a lightweight, file-based relational database management system (RDBMS) that is well-suited for small-scale projects or applications. AWS offers a wide range of database options, including relational, NoSQL, and in-memory databases, each with its own set of pros and cons. Here are some of the pros and cons of alternative AWS databases in comparison to SQLite:</p>
+<p>Amazon Relational Database Service (RDS):
+Amazon RDS is a fully managed relational database service that supports multiple database engines, including MySQL, PostgreSQL, and Oracle.
+Pros:</p>
+<p>Scalability: RDS can easily scale to handle a large amount of traffic and data.
+High Availability: RDS offers automatic failover and backup options to ensure data availability.
+Security: RDS offers robust security features, such as encryption at rest and in transit.
+Managed Service: RDS is a managed service, meaning that AWS handles the administrative tasks of the database, such as backups, updates, and maintenance.
+Cons:</p>
+<p>Cost: RDS can be more expensive than SQLite, especially for small-scale projects or applications.
+Complexity: RDS can be more complex to set up and manage than SQLite.
+Amazon DynamoDB:
+Amazon DynamoDB is a NoSQL database that can handle large amounts of data and is designed for scalability and high availability.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="AWS-Databases">
+<a class="anchor" href="#AWS-Databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>AWS Databases<a class="anchor-link" href="#AWS-Databases"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amazon Web Services (AWS) provides a range of database services to meet various data storage and processing needs. Some of the popular AWS databases are:</p>
+<p>Amazon Relational Database Service (RDS): It provides fully managed relational databases, such as MySQL, PostgreSQL, Oracle, SQL Server, and Amazon Aurora.</p>
+<p>Amazon DynamoDB: It is a fully managed NoSQL database service that provides high performance, scalability, and automatic scaling of throughput capacity.</p>
+<p>Amazon Neptune: It is a fully managed graph database service that enables you to store and query highly connected data sets.</p>
+<p>Amazon DocumentDB: It is a fully managed document database service that is compatible with MongoDB workloads</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/48000753/234100453-b0028f1c-55ba-4a90-ae7b-6c05ee688ee0.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-set-up-RDS">
+<a class="anchor" href="#How-to-set-up-RDS" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to set up RDS<a class="anchor-link" href="#How-to-set-up-RDS"> </a>
+</h1>
+<ol>
+<li>
+<p>Sign in to your AWS account or create a new one if you don't have an account yet.</p>
+</li>
+<li>
+<p>Go to the Amazon RDS service page and click on "Create database."</p>
+</li>
+<li>
+<p>Choose the database engine you want to use from the list of options. Amazon RDS supports several popular database engines, including MySQL, PostgreSQL, Oracle, SQL Server, and more.</p>
+</li>
+<li>
+<p>Choose the database edition and version you want to use. Each database engine has different editions and versions available, so make sure to choose the one that best suits your needs.</p>
+</li>
+<li>
+<p>Choose the instance class for your database. This will determine the amount of CPU, memory, and storage allocated to your database instance.</p>
+</li>
+<li>
+<p>Configure the settings for your database instance, including the database name, master username and password, and any additional settings specific to your chosen database engine.</p>
+</li>
+<li>
+<p>Choose the VPC and subnet where you want to launch your database instance. You can also choose to create a new VPC if you don't have one already.</p>
+</li>
+<li>
+<p>Configure the security group settings for your database instance. This will determine which IP addresses are allowed to connect to your database instance and what ports are open for incoming traffic.</p>
+</li>
+<li>
+<p>Choose any additional options you want to enable, such as automatic backups, encryption, or performance insights.</p>
+</li>
+<li>
+<p>Review your settings and click on "Create database" to launch your Amazon RDS instance.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example">
+<a class="anchor" href="#Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example<a class="anchor-link" href="#Example"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/48000753/234100622-6e1bef2b-ac42-4b4d-acad-694b34809a60.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Video to follow: <a href="https://www.youtube.com/watch?v=Ng_zi11N4_c">https://www.youtube.com/watch?v=Ng_zi11N4_c</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz">
+<a class="anchor" href="#Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz<a class="anchor-link" href="#Quiz"> </a>
+</h1>
+<p>Which of the following is not an AWS database option?</p>
+<p>A. Amazon RDS</p>
+<p>B. Amazon Neptune</p>
+<p>C. SQLite</p>
+<p>D. Amazon DynamoDB</p>
+<p>Which of the following is a file-based, lightweight RDBMS?</p>
+<p>A. Amazon RDS</p>
+<p>B. Amazon Neptune</p>
+<p>C Amazon DynamoDB</p>
+<p>D. SQLite</p>
+<p>Which AWS service enables you to store and query highly connected datasets?</p>
+<p>A. Amazon Relational Database Service (RDS)</p>
+<p>B. Amazon DynamoDB</p>
+<p>C. Amazon Neptune</p>
+<p>D. Amazon DocumentDB</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/devops/2023/04/02/AWSSQL.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devops/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://tri3devopteam.github.io/devops/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devops/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
