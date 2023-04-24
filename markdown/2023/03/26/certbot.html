@@ -68,7 +68,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -86,7 +86,12 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#in-class-certbot-questions-activity">In class Certbot questions activity</a></li>
+<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a></li>
 <li class="toc-entry toc-h1"><a href="#to-install-and-setup-certbot-follow-these-instructions">To install and setup Certbot follow these instructions:</a></li>
+<li class="toc-entry toc-h1"><a href="#unsecured-http-connection">Unsecured HTTP connection</a></li>
+<li class="toc-entry toc-h1"><a href="#secure-https-connection">Secure HTTPS connection</a></li>
+<li class="toc-entry toc-h1"><a href="#you-are-most-likely-done-with-your-hacks-if-you-have-reached-this-point">You are most likely done with your hacks if you have reached this point.</a></li>
 </ul><p>Certbot is a software run in <strong>Python</strong>. It is meant to convert HTTP sites to work with HTTPS, which is much more secure.
 Let’s first explore the background of HTTP to HTTPS:
 HTTPS and HTTP are almost essentially the same protocols, but HTTPS uses SSL to encrypt the requests and responses.
@@ -94,8 +99,9 @@ Furthermore, HTTPS is also used in the form of SSL certificates used to encrypt 
 HTTP runs on port 80, and is an incredibly insecure platform to run a site on. HTTPS runs on ports 80 and 443, and needs a Certification Authority signature for the SSL certificate being used on the https site.
 <strong>APPLICATION IN CSP, PROS/CONS</strong>
 During Trimester 1, while initially setting up our AWS deployment, we attempted to implement Let’s Encrypt, a certificate authority manager, along with Certbot.
-The Certbot configuration is relatively easy: as shown in Trimester 1, you have to install a couple of packages, create the certbot folders on the AWS deployment server, and activate HTTPS for your domain.
-Though it is relatively easy to use, we decided to weigh out some of the pros/cons of using Let’s Encrypt &amp; Certbot:
+The Certbot configuration is relatively easy: as shown in Trimester 1, you have to install a couple of packages, create the certbot folders on the AWS deployment server, and activate HTTPS for your domain.</p>
+
+<p>Though it is relatively easy to use, we decided to weigh out some of the pros/cons of using Let’s Encrypt &amp; Certbot:
 PROS:</p>
 <ol>
   <li>Let’s Encrypt is a free service.</li>
@@ -104,35 +110,71 @@ PROS:</p>
 CONS:</li>
   <li>Certificates have to be replaced/renewed every 90 days. This can be a painful process, especially for multiple sites and groups to do.</li>
   <li>Some domains block Let’s Encrypt, and have relationships with other SSL providers.</li>
-  <li>It is a platform that is vulnerable to malware attacks. Almost 15 thousand Let’s Encrypt certificates have been issued to phishing sites. Is this another risk that we want to factor in? In our opinion, this is too much to consider and it could be beneficial to look at alternatives.</li>
+  <li>It is a platform that is vulnerable to malware attacks. Almost 15 thousand Let’s Encrypt certificates have been issued to phishing sites. Is this another risk that we want to factor in? In our opinion, this can still be a useful tool, because it means that some Let’s Encrypt sites are dangerous, while millions of others are much safer. It is still important to keep in mind.</li>
+  <li>Most private domains that you use Certbot to secure cost money to purchase and use.</li>
 </ol>
+
+<h1 id="in-class-certbot-questions-activity">
+<a class="anchor" href="#in-class-certbot-questions-activity" aria-hidden="true"><span class="octicon octicon-link"></span></a>In class Certbot questions activity</h1>
+
+<ol>
+  <li>What service owns Certbot?</li>
+  <li>How often do certificates need to be replaced/renewed?</li>
+  <li>How many certificates have been issued by Certbot?</li>
+</ol>
+
+<h1 id="hacks">
+<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+<ul>
+  <li>Follow the instructions below and provide a full screenshot of all terminal commands after and including <code class="language-plaintext highlighter-rouge">sudo certbot --apache</code> all the way until it asks for the domain you want to secure. At this point you can take a screenshot and cancel the process. If you choose to continue the setup process and get Certbot fully working and show a before and after screenshot of your domain with http amd https connection we will grant extra credit points on hacks, or make up for lost points in other areas.</li>
+</ul>
+
+<p><img src="https://vardaansinha.github.io/devops/images/devopshacks.png" alt="image"></p>
 
 <h1 id="to-install-and-setup-certbot-follow-these-instructions">
 <a class="anchor" href="#to-install-and-setup-certbot-follow-these-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>To install and setup Certbot follow these instructions:</h1>
 
 <ol>
+  <li>You will first need to have a domain that is not yet secured. You can check if it is secure by going to the domain on your browser and making sure that there is no lock symbol at the top, or that the prefix to the domain is http, rather than https. Be careful here because some of you may have your domain already secured, and I am not sure what would happen if you did this on an already secure domain. Getting a domain will cost around 7$ a year so I cannot demonstrate this step, nor expect anyone else to. Lots of people would already have their AWS running with Certbot, so if you don’t have a domain to use don’t worry as that last step won’t be necessary.</li>
+</ol>
+
+<h1 id="unsecured-http-connection">
+<a class="anchor" href="#unsecured-http-connection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unsecured HTTP connection</h1>
+<p><img src="https://vardaansinha.github.io/devops/images/slitheriohttp.png" alt="image"></p>
+
+<h1 id="secure-https-connection">
+<a class="anchor" href="#secure-https-connection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Secure HTTPS connection</h1>
+<p><img src="https://vardaansinha.github.io/devops/images/schedulehttps.png" alt="image"></p>
+
+<ol>
   <li>
     <p>Install Certbot through the terminal with the following command
-sudo apt-get install certbot</p>
+<code class="language-plaintext highlighter-rouge">sudo apt-get install certbot</code></p>
   </li>
   <li>
-    <p>Next we have to choose a plugin to obtain and install the certificates. For Apache web servers, you can use the following command. If you are using a different browser engine, you can choose the corresponding plugin for that browser engine.
-sudo certbot –apache</p>
+    <p>Next we have to choose a plugin to obtain and install the certificates. For Apache web servers, you can use the following command. If you are using a different browser engine, you can choose the corresponding plugin for that browser engine. You might have issues with this if you don’t have the apache plugin installed. To fix this run the command <code class="language-plaintext highlighter-rouge">sudo apt-get install python3-certbot-apache</code>. After that run the second line of code.
+<code class="language-plaintext highlighter-rouge">sudo certbot --apache</code></p>
   </li>
   <li>
-    <p>Next, you will need to follow the given prompts and certbot will help us set the rest up. You will need to enter your email address.</p>
+    <p>Next, you will need to follow the given prompts and Certbot will help us set the rest up. You will need to enter your email for renewals and other things. It will also ask to share your email with another organization, to which you can respond no.</p>
+  </li>
+</ol>
+
+<h1 id="you-are-most-likely-done-with-your-hacks-if-you-have-reached-this-point">
+<a class="anchor" href="#you-are-most-likely-done-with-your-hacks-if-you-have-reached-this-point" aria-hidden="true"><span class="octicon octicon-link"></span></a>You are most likely done with your hacks if you have reached this point.</h1>
+
+<ol>
+  <li>
+    <p>You will have to create a DNS text record with a specific value that certbot can use to make sure you actually have ownership of the domain.</p>
   </li>
   <li>
     <p>Now you have to verify the installation and you can check if it’s working by checking the website in your browser, or using a tool such as SSL Labs, which can check for an SSL certificate.</p>
   </li>
   <li>
-    <p>Now you have to ensure that your certbot will continue working with minimum maintenance. You can do this by making the certificate auto renew using this command.</p>
+    <p>This is optional. Now you can ensure that your certbot will continue working with minimum maintenance. You can do this by making the certificate auto renew using this command.
+<code class="language-plaintext highlighter-rouge">sudo certbot renew</code></p>
   </li>
 </ol>
-
-<p>”””
-sudo certbot renew
-“””</p>
 
   </div><a class="u-url" href="/devops/markdown/2023/03/26/certbot.html" hidden></a>
 </article>
