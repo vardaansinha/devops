@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: base
-description: Group Hacks
+description: AWS Devolpment by Shivansh Goel
 categories: [markdown, Week 20]
 title: AWS Devolpment
 ---
