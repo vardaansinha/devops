@@ -46,12 +46,12 @@ Clone your gitserver into a directory of your choosing
 - git clone https://github.com/yourgitserver
 
 ### Making sure that the Web Service can Run
-To make sure that the Web Serbice to running properly
+To make sure that the Web Service to running properly
 - Run the main.py file and see if the server is able to run
 If there are some errors, try running the command:
 - pip install -r requirements.txt
 
-###  Make sure that there is a Dockerifle or that it is up to Date
+###  Make sure that there is a Dockerfile or that it is up to Date
 - Edit the Dockerfile: sudo nano Dockerfile
 Make sure that it looks like something like this:
 
