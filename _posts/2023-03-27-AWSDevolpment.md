@@ -79,9 +79,9 @@ Make sure you find the application that matches the application name and ports. 
 
 ### Testing Localpoint
 To make sure that all the previous steps are running correctly and the everything is going on the right path. You should run these commands to see if there is a success or a failure.
-- curl http://localhost:8086
+- curl http://localhost:[yourport]
 If there is a "Failed to connect", then that means that something is not going right and that you should look at the changes you have made in the server.
-- Another command to run would be: curl http://localhost:8086 | html2text
+- Another command to run would be: curl http://localhost:[yourport] | html2text
 
 ###  Test preparation for Docker Web Application using IP for Internet Access
 First make sure to install Nginx
