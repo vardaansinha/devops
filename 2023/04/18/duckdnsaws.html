@@ -68,7 +68,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -113,11 +113,12 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#HACKS">HACKS </a></li>
 <li class="toc-entry toc-h1"><a href="#Quiz-Time">Quiz Time </a></li>
-<li class="toc-entry toc-h1"><a href="#FRQ-Portion-of-the-Quiz">FRQ Portion of the Quiz </a>
+<li class="toc-entry toc-h1"><a href="#FRQ">FRQ </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Question-1:-Why-does-one-using-DuckDNS-over-Freenom?">Question 1: Why does one using DuckDNS over Freenom? </a></li>
-<li class="toc-entry toc-h3"><a href="#Question-2:-What-are-all-the-steps-to-set-up-a-DuckDNS-Sever?">Question 2: What are all the steps to set up a DuckDNS Sever? </a></li>
-<li class="toc-entry toc-h3"><a href="#Question-3:-What-are-all-the-steps-to-set-an-AWS-Server?">Question 3: What are all the steps to set an AWS Server? </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-1:-How-does-AWS-Work?">Question 1: How does AWS Work? </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-2:-How-is-AWS-useful-for-projects?">Question 2: How is AWS useful for projects? </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-3:-How-does-Duck-DNS-Work?">Question 3: How does Duck DNS Work? </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-4:-How-is-Duck-DNS-useful-for-projects?">Question 4: How is Duck DNS useful for projects? </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Reflection">Reflection </a></li>
@@ -226,10 +227,10 @@ window.onload = wrap_img;
     <span class="s2">"What is the fourth Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project"</span><span class="p">:</span> <span class="s2">".4"</span><span class="p">,</span>
     <span class="s2">"What is the second Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
     <span class="s2">"What files are you supposed to edit after finishing the first steps of setting up the server and cloning it within the AWS Server? 1: Edit the docker files and docker.yml, 2: Edit the main.py file to change the characteristcs."</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
-    <span class="s2">"What is the first step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
-    <span class="s2">"What is the second step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
-    <span class="s2">"What is the third step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
-    <span class="s2">"What is the fourth step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script"</span><span class="p">:</span> <span class="s2">"4"</span>
+    <span class="s2">"What is the first step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"What is the second step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
+    <span class="s2">"What is the third step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
+    <span class="s2">"What is the fourth step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org"</span><span class="p">:</span> <span class="s2">"4"</span>
 <span class="p">}</span>
 
 <span class="c1"># number of questions as length of the dictionary</span>
@@ -278,33 +279,33 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, shaur running C:\Users\shaur\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\python.exe
+<pre>Hello, shivansh running /home/shivansh/anaconda3/bin/python
 You will be asked 11 questions.
 Are you ready to take a test! Press Enter key to begin. Best of luck :)
 Question 1 : What does Domain Name Server represent?
 DNS is correct! Good Job!
 Question 2 : What does this Represent: Amazon Web Services, which is a cloud computing platform provided by Amazon.
- is incorrect! Better Luck next time.
+AWS is correct! Good Job!
 Question 3 : What is the first Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
 1 is correct! Good Job!
 Question 4 : What is the third Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
-2 is incorrect! Better Luck next time.
-Question 5 : What is the fourth Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
-3 is incorrect! Better Luck next time.
-Question 6 : What is the second Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
-2 is correct! Good Job!
-Question 7 : What files are you supposed to edit after finishing the first steps of setting up the server and cloning it within the AWS Server? 1: Edit the docker files and docker.yml, 2: Edit the main.py file to change the characteristcs.
-2 is incorrect! Better Luck next time.
-Question 8 : What is the first step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script
-4 is incorrect! Better Luck next time.
-Question 9 : What is the second step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script
 3 is correct! Good Job!
-Question 10 : What is the third step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script
-4 is incorrect! Better Luck next time.
-Question 11 : What is the fourth step to setting up a DuckDNS Server? 1: Signing up for a DuckDNS account, 2: Download the DuckDNS client , 3: Create the subdomain, 4: Run the installation script
+Question 5 : What is the fourth Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
+2 is incorrect! Better Luck next time.
+Question 6 : What is the second Step to setting up an AWS Server? 1: Connecting to a Ubuntu EC2 Instance, 2: Start updating the system, 3: Clone the repository which one wishes to deploy, 4: Run the command: main.py to start the project
 1 is incorrect! Better Luck next time.
-shaur you scored 4/11
-Total Percentage: 36.36%
+Question 7 : What files are you supposed to edit after finishing the first steps of setting up the server and cloning it within the AWS Server? 1: Edit the docker files and docker.yml, 2: Edit the main.py file to change the characteristcs.
+1 is correct! Good Job!
+Question 8 : What is the first step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org
+1 is correct! Good Job!
+Question 9 : What is the second step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org
+3 is correct! Good Job!
+Question 10 : What is the third step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org
+2 is correct! Good Job!
+Question 11 : What is the fourth step to setting up a DuckDNS Server? 1: Sign in with your DuckDNS account using Github, 2: Configure current ip to the IP address that you want to access and click update ip button , 3: Create the subdomain, 4: Access site by typing in subdomain.duckdns.org
+4 is correct! Good Job!
+shivansh you scored 9/11
+Total Percentage: 81.82%
 </pre>
 </div>
 </div>
@@ -318,18 +319,21 @@ Total Percentage: 36.36%
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="FRQ-Portion-of-the-Quiz">
-<a class="anchor" href="#FRQ-Portion-of-the-Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ Portion of the Quiz<a class="anchor-link" href="#FRQ-Portion-of-the-Quiz"> </a>
+<h1 id="FRQ">
+<a class="anchor" href="#FRQ" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ<a class="anchor-link" href="#FRQ"> </a>
 </h1>
-<p>Complete the answers in the question right below.</p>
-<h3 id="Question-1:-Why-does-one-using-DuckDNS-over-Freenom?">
-<a class="anchor" href="#Question-1:-Why-does-one-using-DuckDNS-over-Freenom?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 1: Why does one using DuckDNS over Freenom?<a class="anchor-link" href="#Question-1:-Why-does-one-using-DuckDNS-over-Freenom?"> </a>
+<p>Complete the answers in <strong>your own words</strong></p>
+<h3 id="Question-1:-How-does-AWS-Work?">
+<a class="anchor" href="#Question-1:-How-does-AWS-Work?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 1: How does AWS Work?<a class="anchor-link" href="#Question-1:-How-does-AWS-Work?"> </a>
 </h3>
-<h3 id="Question-2:-What-are-all-the-steps-to-set-up-a-DuckDNS-Sever?">
-<a class="anchor" href="#Question-2:-What-are-all-the-steps-to-set-up-a-DuckDNS-Sever?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 2: What are all the steps to set up a DuckDNS Sever?<a class="anchor-link" href="#Question-2:-What-are-all-the-steps-to-set-up-a-DuckDNS-Sever?"> </a>
+<h3 id="Question-2:-How-is-AWS-useful-for-projects?">
+<a class="anchor" href="#Question-2:-How-is-AWS-useful-for-projects?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 2: How is AWS useful for projects?<a class="anchor-link" href="#Question-2:-How-is-AWS-useful-for-projects?"> </a>
 </h3>
-<h3 id="Question-3:-What-are-all-the-steps-to-set-an-AWS-Server?">
-<a class="anchor" href="#Question-3:-What-are-all-the-steps-to-set-an-AWS-Server?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 3: What are all the steps to set an AWS Server?<a class="anchor-link" href="#Question-3:-What-are-all-the-steps-to-set-an-AWS-Server?"> </a>
+<h3 id="Question-3:-How-does-Duck-DNS-Work?">
+<a class="anchor" href="#Question-3:-How-does-Duck-DNS-Work?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 3: How does Duck DNS Work?<a class="anchor-link" href="#Question-3:-How-does-Duck-DNS-Work?"> </a>
+</h3>
+<h3 id="Question-4:-How-is-Duck-DNS-useful-for-projects?">
+<a class="anchor" href="#Question-4:-How-is-Duck-DNS-useful-for-projects?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 4: How is Duck DNS useful for projects?<a class="anchor-link" href="#Question-4:-How-is-Duck-DNS-useful-for-projects?"> </a>
 </h3>
 </div>
 </div>
