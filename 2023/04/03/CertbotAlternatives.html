@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Alternatives to Certbot | DevOps project for AP CSP</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Alternatives to Certbot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)" />
+<meta property="og:description" content="devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/04/03/CertbotAlternatives.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/04/03/CertbotAlternatives.html" />
+<meta property="og:site_name" content="DevOps project for AP CSP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-03T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Alternatives to Certbot" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-03T00:00:00-05:00","datePublished":"2023-04-03T00:00:00-05:00","description":"devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)","headline":"Alternatives to Certbot","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/04/03/CertbotAlternatives.html"},"url":"https://tri3devopteam.github.io/devops/2023/04/03/CertbotAlternatives.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps project for AP CSP" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/ezgif.com-webp-to-png.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devops/">DevOps project for AP CSP</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Alternatives to Certbot</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-03T00:00:00-05:00" itemprop="datePublished">
+        Apr 3, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/tri-3-group-fastpages-devops-/tree/master/_notebooks/2023-04-03-CertbotAlternatives.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/devops/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/tri-3-group-fastpages-devops-/master?filepath=_notebooks%2F2023-04-03-CertbotAlternatives.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/tri-3-group-fastpages-devops-/blob/master/_notebooks/2023-04-03-CertbotAlternatives.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftri-3-group-fastpages-devops-%2Fblob%2Fmaster%2F_notebooks%2F2023-04-03-CertbotAlternatives.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/devops/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-03-CertbotAlternatives.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>acme.sh: acme.sh is a command-line tool that can be used to obtain and renew SSL/TLS certificates from Let's Encrypt, as well as other certificate authorities.</p>
+<p>ZeroSSL: ZeroSSL is a web-based tool that allows you to generate free SSL/TLS certificates for your website. It also provides an API that can be used to automate the certificate renewal process.</p>
+<p>OpenSSL: OpenSSL is a popular open-source toolkit used to implement the SSL/TLS protocols. It includes a command-line tool that can be used to generate SSL/TLS certificates.</p>
+<p>dehydrated: dehydrated is a simple and lightweight shell script for managing SSL/TLS certificates. It supports multiple certificate authorities and can be easily integrated with other tools and scripts.</p>
+<p>Lego: Lego is another command-line tool that supports multiple certificate authorities, including Let's Encrypt, Buypass, and ZeroSSL. It also provides a library that can be used to integrate certificate management into your own applications.</p>
+<p>There are several other alternatives available, but these are some of the most popular and well-regarded options. Ultimately, the choice of tool will depend on your specific needs and preferences.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="OpenSSL">OpenSSL<a class="anchor-link" href="#OpenSSL"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Making Keys: OpenSSL helps to create a secret key and a shared key. The secret key is kept hidden and helps to code data sent to the computer, while the shared key is given to others so they can code data sent to the computer.</p>
+<p>Signing Certificates: OpenSSL can help to sign a certificate request with a trusted group called a certificate authority (CA). This request has the shared key and other important info about the computer. The CA checks this info, and if it's good, they give a signed certificate that the computer can use to show others who it is.</p>
+<p>SSL/TLS Handshake: When someone connects to a computer, they do an SSL/TLS handshake. During this, the computer shows its signed certificate, and the other person checks if it's good and from a trusted CA. The other person also makes a random key for the session, which is used to code data sent between them.</p>
+<p>Coding Data: After the SSL/TLS handshake, the person and the computer can send coded data using the session key. This makes sure that any data sent is safe from being listened to or messed with.</p>
+<p>OpenSSL has some tools you can use to do these jobs, like openssl genpkey for making keys, openssl req for signing certificates, and openssl s_server for making an SSL/TLS computer. OpenSSL can also be added to web servers like Apache and Nginx to help code web data.
+In short, OpenSSL is a strong and helpful tool for coding with SSL/TLS, and many people use it on the internet to keep data safe.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Demo">Demo<a class="anchor-link" href="#Demo"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz">Quiz<a class="anchor-link" href="#Quiz"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the purpose of OpenSSL?
+a) To generate public keys
+b) To encrypt data
+c) To sign certificates
+d) All of the above</p>
+<p>What is the role of the private key in OpenSSL?
+a) It is made available to clients to encrypt data
+b) It is used to decrypt data sent to the server
+c) It is used to encrypt data sent to the server
+d) It is kept secret and used to encrypt data sent to the server</p>
+<p>What is the SSL/TLS handshake?
+a) The process of signing a certificate request with a trusted CA
+b) The process of generating a random session key
+c) The process of exchanging encrypted data between the client and server
+d) The process of presenting a signed certificate to the client and verifying its validity</p>
+<p>What are some command-line tools provided by OpenSSL?
+a) openssl genpkey, openssl signcert, openssl encrypt
+b) openssl keygen, openssl req, openssl s_server
+c) openssl createkey, openssl ca, openssl encrypt
+d) openssl generatekey, openssl certreq, openssl server</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lego">Lego<a class="anchor-link" href="#Lego"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lego is an open-source, cross-platform ACME client that automates the process of obtaining and renewing SSL/TLS certificates from Let's Encrypt.</p>
+<p>Key Features:</p>
+<ul>
+<li>Simple and easy-to-use interface for managing SSL/TLS certificates for your domains.</li>
+<li>Supports both HTTP-01 and DNS-01 challenges for domain validation.</li>
+<li>Supports wildcards and multiple domains in a single certificate.</li>
+<li>Built-in integrations with popular web servers and load balancers, including Apache, Nginx, HAProxy, and Caddy.
+Stores configuration in a simple JSON file format, which makes it easy to manage and version control.
+Provides a number of advanced configuration options, such as custom DNS providers and HTTP challenge servers, and different account and certificate storage backends.
+Compatible with a wide range of platforms and operating systems, including Linux, macOS, Windows, and FreeBSD.
+Provides pre-built binaries for many popular architectures, making it easy to install and use on different systems.
+How it Works:</li>
+</ul>
+<p>Lego communicates with the Let's Encrypt server using the ACME protocol to request and manage SSL/TLS certificates.
+To obtain a certificate, Lego first validates ownership of the domain by completing an HTTP-01 or DNS-01 challenge.
+Once the domain is validated, Lego generates a private key and a certificate signing request (CSR), which is then sent to Let's Encrypt to generate the certificate.
+Lego then stores the obtained certificate and private key, and configures the web server to use them for SSL/TLS encryption.
+Lego automatically renews the certificates before they expire, ensuring that your domains are always secured with up-to-date certificates.</p>
+<p>Overall, Lego provides a simple and powerful solution for managing SSL/TLS certificates for your domains, and is an excellent choice for anyone looking to automate the process of obtaining and renewing SSL/TLS certificates with Let's Encrypt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz">Quiz<a class="anchor-link" href="#Quiz"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is Lego?
+A) A popular building block toy
+B) An open-source ACME client for obtaining SSL/TLS certificates
+C) A web server software
+D) A DNS provider</p>
+<p>What challenges does Lego support for domain validation?
+A) HTTP-02 and DNS-03
+B) HTTP-01 and DNS-01
+C) HTTPS-01 and DNS-01
+D) TLS-01 and DNS-02</p>
+<p>What features does Lego provide for managing SSL/TLS certificates?
+A) Integration with popular web servers and load balancers
+B) Advanced configuration options, such as custom DNS providers and HTTP challenge servers
+C) Support for multiple domains in a single certificate and wildcard certificates
+D) All of the above</p>
+<p>How does Lego ensure that SSL/TLS certificates are always up-to-date?
+A) By sending reminders to the domain owner's email
+B) By automatically renewing the certificates before they expire
+C) By generating new private keys and certificate signing requests every month
+D) By providing manual renewal options only</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/devops/2023/04/03/CertbotAlternatives.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devops/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://tri3devopteam.github.io/devops/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devops/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
