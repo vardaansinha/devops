@@ -72,7 +72,9 @@ Make sure that it looks like something like this:
 
 ### Make sure to Verify that the Web Application is working with Docker
 - docker-compose ps
+
 Make sure you find the application that matches the application name and ports. If you can't find them that means that you did something wrong and that you should go back to finish other steps.
+![image](https://vardaansinha.github.io/devops/images/dockercomposeps.PNG)
 
 
 ### Testing Localpoint
