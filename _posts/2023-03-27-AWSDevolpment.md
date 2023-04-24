@@ -119,9 +119,23 @@ Go on the internet and run this: http://(your ip address)
 The last Steps involve setting up the DNS Server
 
 ### Video
+https://www.youtube.com/watch?v=QI67AGEeQdA
 
-### Are there any outdated Nginx/Docker functionalities to address?
-- As of right now there are no outdate Nginx/Docker functionalities that needed to be adressed, except to make sure to periodically run "sudo apt-get update", and "'sudo apt-get upgrade"
+# Hacks Time
 
-### Is there anything unclear that we need to communicate further to the students for deployment?
-There is nothing unclear that needs to be communicated further except for the usage of the DuckDNS for the DNS Account and Server
+### FRQ Question Hacks (Answer with more than 2-3 full complete sentneces):
+
+- Are there any outdated Nginx/Docker functionalities to address?
+
+
+
+
+- Is there anything unclear that we need to communicate further to the students for deployment?
+
+
+### Diagram
+To Truly understand Nginx and why we are using it, it is imortnat to compare it to other web servers?
+Compare NGINX with lighttpd in a Venn Diagram, and place the image below:
+
+
+
