@@ -61,7 +61,7 @@ Make sure that it looks like something like this:
 
 
 ### Make sure that the docker-compose.yml is up to dagte
-- Edit the docker-compose.yml file and edit the flask_port, volumes, and the image
+- Edit the docker-compose.yml file and edit the left port to your own unique one, volumes, and the image
 ![image](https://vardaansinha.github.io/devops/images/dockercompose.PNG)
 
 ### Start Running Docker
