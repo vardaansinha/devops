@@ -118,7 +118,7 @@ The last Steps involve setting up the DNS Server
 
 
 ### Diagram
-To Truly understand Nginx and why we are using it, it is imortnat to compare it to other web servers?
+To Truly understand Nginx and why we are using it, it is important to compare it to other web servers?
 Compare NGINX with lighttpd in a Venn Diagram, and place the image below:
 
 
