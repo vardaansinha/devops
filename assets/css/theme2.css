@@ -5,7 +5,7 @@ textarea,
 select,
 button,
 header {
-    background-color: white !important;
+    background-color: rgb(150, 140, 140) !important;
     color: black !important;
 }
 
