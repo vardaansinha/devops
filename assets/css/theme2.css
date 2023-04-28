@@ -14,14 +14,14 @@ a {
 }
 
 a:hover {
-    color: rgba(255, 255, 255, 0.87) !important;
+    color: black !important;
 }
 
 .site-title,
 .site-title:visited,
 .site-nav,
 .page-link {
-    color: rgba(255, 255, 255, 0.87) !important;
+    color: black !important;
 }
 
 .site-nav {
@@ -40,7 +40,7 @@ code {
 }
 
 .page-description {
-    color: rgba(255, 255, 255, 0.69);
+    color: black;
 }
 
 .post-meta {
@@ -49,7 +49,7 @@ code {
 
 .post-content p,
 .post-content li {
-    color: rgba(255, 255, 255, 0.69);
+    color: black;
 }
 
 .btn {
@@ -71,7 +71,7 @@ table th {
 table td {
     background-color: #121212;
     border-color: #333333;
-    color: rgba(255, 255, 255, 0.69);
+    color: black;
 }
 
 .flash {
