@@ -1,9 +1,11 @@
 ---
-layout: page
-title: Game
-permalink: /game/
+toc: true
+layout: base
+description: Game
+categories: [markdown, Week 20]
+title: Number Guesser
 ---
-
+## Hacks Part 3
 
 <html>
 <head>
