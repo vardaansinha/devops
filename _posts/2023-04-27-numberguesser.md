@@ -10,7 +10,7 @@ title: Number Guesser
 <html>
 <head>
   <title>Guess the Number</title>
-  <link rel="stylesheet" href="/devops/assets/css/game.css">
+  <link rel="stylesheet" href="/devops/assets/css/numberguesser.css">
 </head>
 <body>
 
