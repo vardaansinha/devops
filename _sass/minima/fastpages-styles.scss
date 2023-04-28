@@ -1,6 +1,13 @@
 //Default Overrides For Styles In Minima 
 // If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
 
+@import "new";
+
+header {
+  background-color: $primary-color;
+  font-family:'Courier New', Courier, monospace;
+  color:#2e0137
+}
 .post img {
         display: block;
         // border:1px solid #021a40;
