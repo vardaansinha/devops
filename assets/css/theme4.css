@@ -7,6 +7,7 @@ button,
 header {
     background-color: #cd6d0d !important;
     color: rgb(95, 60, 60) !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;    
 }
 
 a {
