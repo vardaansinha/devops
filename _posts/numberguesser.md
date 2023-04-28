@@ -8,14 +8,14 @@ permalink: /game/
 <html>
 <head>
   <title>Guess the Number</title>
-  <link rel="stylesheet" href="assets/css/game.css">
+  <link rel="stylesheet" href="/devops/assets/css/game.css">
 </head>
 <body>
 
   <h1>Guess the Number</h1>
-  <p>Try to guess the number between 1 and 100.</p>
+  <p id="numberguessor">Try to guess the number between 1 and 100.</p>
   <input type="text" id="guess" placeholder="Enter your guess">
-  <button onclick="checkGuess()">Submit</button>
+  <button is="button" onclick="checkGuess()">Submit</button>
   <p id="result"></p>
   <script>
     // Generate a random number between 1 and 100

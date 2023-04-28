@@ -1,4 +1,14 @@
-#game {
+#numberguessor {
+    color:  white !important;
+    background-color: orangered !important;
+}
+
+#guess {
+    color:  white !important;
+    background-color: orangered !important;
+}
+
+#button {
     color:  white !important;
     background-color: orangered !important;
 }
