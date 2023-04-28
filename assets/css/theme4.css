@@ -5,8 +5,8 @@ textarea,
 select,
 button,
 header {
-    color: rgba(215, 104, 104, 0.87) !important;
-    background-color: #121212 !important;
+    background-color: #cd6d0d !important;
+    color: rgb(95, 60, 60) !important;
 }
 
 a {
@@ -90,7 +90,7 @@ canvas {
 }
 
 li .post-meta-description {
-    color: rgba(255, 255, 255, 0.69) !important;
+    color: #efdecd !important;
 }
 
 /*# sourceMappingURL=dark-mode1.css.map */
