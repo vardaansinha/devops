@@ -22,6 +22,7 @@ a:hover {
 .site-nav,
 .page-link {
     color: rgb(223, 18, 18) !important;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 
 .site-nav {
