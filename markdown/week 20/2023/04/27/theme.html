@@ -63,9 +63,9 @@ window.onload = wrap_img;
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="assets/css/theme1.css" />
-    <link rel="stylesheet" href="assets/css/theme2.css" />
-    <link rel="stylesheet" href="assets/css/theme3.css" id="theme-link" />
+    <link rel="stylesheet" href="/assets/css/theme1.css" />
+    <link rel="stylesheet" href="/assets/css/theme2.css" />
+    <link rel="stylesheet" href="/assets/css/theme3.css" id="theme-link" />
 </head>
 <body>
     <button id="theme-toggle">Toggle Theme</button>
@@ -73,12 +73,12 @@ window.onload = wrap_img;
         const toggleButton = document.querySelector('#theme-toggle');
         const themeLink = document.querySelector('#theme-link');
         toggleButton.addEventListener('click', () => {
-            if (themeLink.getAttribute('href') === 'assets/css/theme1.css') {
-                themeLink.setAttribute('href', 'assets/css/theme2.css');
-            } else if (themeLink.getAttribute('href') === 'assets/css/theme2.css') {
-                themeLink.setAttribute('href', 'assets/css/theme3.css');
+            if (themeLink.getAttribute('href') === '/assets/css/theme1.css') {
+                themeLink.setAttribute('href', '/assets/css/theme2.css');
+            } else if (themeLink.getAttribute('href') === '/assets/css/theme2.css') {
+                themeLink.setAttribute('href', '/assets/css/theme3.css');
             } else {
-                themeLink.setAttribute('href', 'assets/css/theme1.css');
+                themeLink.setAttribute('href', '/assets/css/theme1.css');
             }
         });
     </script>
