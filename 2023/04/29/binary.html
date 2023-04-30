@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binary Math Hacks 3 buttons Extra Credit | DevOps project for AP CSP</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Binary Math Hacks 3 buttons Extra Credit" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="BInary Math Hacks 3 buttons with SASS" />
+<meta property="og:description" content="BInary Math Hacks 3 buttons with SASS" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/04/29/binary.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/04/29/binary.html" />
+<meta property="og:site_name" content="DevOps project for AP CSP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binary Math Hacks 3 buttons Extra Credit" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-29T00:00:00-05:00","datePublished":"2023-04-29T00:00:00-05:00","description":"BInary Math Hacks 3 buttons with SASS","headline":"Binary Math Hacks 3 buttons Extra Credit","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/04/29/binary.html"},"url":"https://tri3devopteam.github.io/devops/2023/04/29/binary.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps project for AP CSP" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/ezgif.com-webp-to-png.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devops/">DevOps project for AP CSP</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="here-are-the-3-button-hacks">Here are the 3 button hacks</h1>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Binary Division Calculator</title>
+    <style>
+      body {
+        background-color: #F5F5F5;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      form {
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"] {
+        font-size: 24px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      input[type="button"] {
+        font-size: 24px;
+        padding: 10px 20px;
+        background-color: #FF8000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      input[type="button"]:hover {
+        background-color: #FFA500;
+      }
+      
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      
+      #binary_result {
+        font-weight: bold;
+        color: #FF8000;
+      }
+      
+      #decimal_result {
+        color: #888;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Binary Division Calculator</h1>
+    
+    <form>
+      <label for="dividend">Enter the dividend (binary number):</label>
+      <input type="text" id="dividend" name="dividend" placeholder="e.g. 1010" required="" />
+      
+      <label for="divisor">Enter the divisor (binary number):</label>
+      <input type="text" id="divisor" name="divisor" placeholder="e.g. 1101" required="" />
+      
+      <input type="button" value="Calculate Quotient" onclick="binaryDivision()" />
+    </form>
+    
+    <p id="binary_result"></p>
+    <p id="decimal_result"></p>
+    
+    <script>
+      function binaryDivision() {
+        // Get the values of the two input fields
+        var dividend = document.getElementById("dividend").value;
+        var divisor = document.getElementById("divisor").value;
+        // Convert the binary strings to decimal integers and divide
+        var decimalQuotient = parseInt(dividend, 2) / parseInt(divisor, 2);
+        // Convert the decimal quotient back to a binary string and display it
+        var binaryQuotient = Math.floor(decimalQuotient).toString(2);
+        document.getElementById("binary_result").innerHTML = "The quotient of " + dividend + " divided by " + divisor + " is: " + binaryQuotient;
+        document.getElementById("decimal_result").innerHTML = "In decimal: " + decimalQuotient;
+      }
+    </script
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Binary Multiplication Calculator</title>
+    <style>
+      body {
+        background-color: #F5F5F5;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      form {
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"] {
+        font-size: 24px;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      input[type="button"] {
+        font-size: 24px;
+        padding: 10px 20px;
+        background-color: #af4cac;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      input[type="button"]:hover {
+        background-color: #32C422;
+      }
+      
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      
+      #binary_result {
+        font-weight: bold;
+        color: #4CAF50;
+      }
+      
+      #decimal_result {
+        color: #888;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Binary Multiplication Calculator</h1>
+    
+    <form>
+      <label for="binary1">Enter the first binary number:</label>
+      <input type="text" id="binary1" name="binary1" placeholder="e.g. 1010" required>
+      
+      <label for="binary2">Enter the second binary number:</label>
+      <input type="text" id="binary2" name="binary2" placeholder="e.g. 1101" required>
+      
+      <input type="button" value="Calculate Product" onclick="binaryMultiplication()">
+    </form>
+    
+    <p id="binary_result"></p>
+    <p id="decimal_result"></p>
+    
+    <script>
+      function binaryMultiplication() {
+        // Get the values of the two input fields
+        var binary1 = document.getElementById("binary1").value;
+        var binary2 = document.getElementById("binary2").value;
+        // Convert the binary strings to decimal integers and multiply
+        var decimalProduct = parseInt(binary1, 2) * parseInt(binary2, 2);
+        // Convert the decimal product back to a binary string and display it
+        var binaryProduct = decimalProduct.toString(2);
+        document.getElementById("binary_result").innerHTML = "The product of " + binary1 + " and " + binary2 + " is: " + binaryProduct;
+        document.getElementById("decimal_result").innerHTML = "In decimal: " + decimalProduct;
+      }
+    </script>
+    
+  </body>
+</html>
+
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Binary Subtraction Calculator</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      form {
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"] {
+        font-size: 24px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      input[type="button"] {
+        font-size: 24px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      input[type="button"]:hover {
+        background-color: #32c422;
+      }
+      
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      
+      #binary_result {
+        font-weight: bold;
+      }
+      
+      #decimal_result {
+        color: #888;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Binary Subtraction Calculator</h1>
+    
+    <form>
+      <label for="binary1">Enter the first binary number:</label>
+      <input type="text" id="binary1" name="binary1" placeholder="e.g. 1010" required="" />
+      
+      <label for="binary2">Enter the second binary number:</label>
+      <input type="text" id="binary2" name="binary2" placeholder="e.g. 1101" required="" />
+      
+      <input type="button" value="Calculate Difference" onclick="binarySubtraction()" />
+    </form>
+    
+    <p id="binary_result"></p>
+    <p id="decimal_result"></p>
+    
+    <script>
+      function binarySubtraction() {
+        // Get the values of the two input fields
+        var binary1 = document.getElementById("binary1").value;
+        var binary2 = document.getElementById("binary2").value;
+        // Convert the binary strings to decimal integers and subtract
+        var decimalDiff = parseInt(binary1, 2) - parseInt(binary2, 2);
+        // Convert the decimal difference back to a binary string and display it
+        var binaryDiff = decimalDiff.toString(2);
+        document.getElementById("binary_result").innerHTML = "The difference of " + binary1 + " and " + binary2 + " is: " + binaryDiff;
+        document.getElementById("decimal_result").innerHTML = "In decimal: " + decimalDiff;
+      }
+    </script>
+    
+  </body>
+</html>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devops/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://tri3devopteam.github.io/devops/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devops/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
