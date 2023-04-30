@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Binary Division Calculator</title>
+    <style>
+      body {
+        background-color: #F5F5F5;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      form {
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"] {
+        font-size: 24px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      input[type="button"] {
+        font-size: 24px;
+        padding: 10px 20px;
+        background-color: #FF8000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      input[type="button"]:hover {
+        background-color: #FFA500;
+      }
+      
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      
+      #binary_result {
+        font-weight: bold;
+        color: #FF8000;
+      }
+      
+      #decimal_result {
+        color: #888;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Binary Division Calculator</h1>
+    
+    <form>
+      <label for="dividend">Enter the dividend (binary number):</label>
+      <input type="text" id="dividend" name="dividend" placeholder="e.g. 1010" required>
+      
+      <label for="divisor">Enter the divisor (binary number):</label>
+      <input type="text" id="divisor" name="divisor" placeholder="e.g. 1101" required>
+      
+      <input type="button" value="Calculate Quotient" onclick="binaryDivision()">
+    </form>
+    
+    <p id="binary_result"></p>
+    <p id="decimal_result"></p>
+    
+    <script>
+      function binaryDivision() {
+        // Get the values of the two input fields
+        var dividend = document.getElementById("dividend").value;
+        var divisor = document.getElementById("divisor").value;
+        // Convert the binary strings to decimal integers and divide
+        var decimalQuotient = parseInt(dividend, 2) / parseInt(divisor, 2);
+        // Convert the decimal quotient back to a binary string and display it
+        var binaryQuotient = Math.floor(decimalQuotient).toString(2);
+        document.getElementById("binary_result").innerHTML = "The quotient of " + dividend + " divided by " + divisor + " is: " + binaryQuotient;
+        document.getElementById("decimal_result").innerHTML = "In decimal: " + decimalQuotient;
+      }
+    </script
+
+
+
