@@ -2,7 +2,7 @@
 toc: true
 layout: base
 description: BInary Math Hacks 3 buttons with SASS
-categories: [markdown, Week 28]
+categories: 
 title: Binary Math Hacks 3 buttons Extra Credit
 ---
 
