@@ -68,7 +68,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      17 min read
     
 </span></p>
 
@@ -691,9 +691,144 @@ We will use tf.keras, a high-level API to build and train models in TensorFlow.<
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2.12.0
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb Cell 25</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> # TensorFlow and tf.keras
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> import tensorflow as tf
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> # Helper libraries
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> import numpy as np
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/__init__.py:37</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span> import sys as _sys
+<span class="ansi-green-intense-fg ansi-bold">     35</span> import typing as _typing
+<span class="ansi-green-fg">---&gt; 37</span> from tensorflow.python.tools import module_util as _module_util
+<span class="ansi-green-intense-fg ansi-bold">     38</span> from tensorflow.python.util.lazy_loader import LazyLoader as _LazyLoader
+<span class="ansi-green-intense-fg ansi-bold">     40</span> # Make sure code inside the TensorFlow codebase can use tf2.enabled() at import.
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/__init__.py:42</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     37</span> from tensorflow.python.eager import context
+<span class="ansi-green-intense-fg ansi-bold">     39</span> # pylint: enable=wildcard-import
+<span class="ansi-green-intense-fg ansi-bold">     40</span> 
+<span class="ansi-green-intense-fg ansi-bold">     41</span> # Bring in subpackages.
+<span class="ansi-green-fg">---&gt; 42</span> from tensorflow.python import data
+<span class="ansi-green-intense-fg ansi-bold">     43</span> from tensorflow.python import distribute
+<span class="ansi-green-intense-fg ansi-bold">     44</span> # from tensorflow.python import keras
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/__init__.py:21</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """`tf.data.Dataset` API for input pipelines.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> See [Importing Data](https://tensorflow.org/guide/data) for an overview.
+<span class="ansi-green-intense-fg ansi-bold">     18</span> """
+<span class="ansi-green-intense-fg ansi-bold">     20</span> # pylint: disable=unused-import
+<span class="ansi-green-fg">---&gt; 21</span> from tensorflow.python.data import experimental
+<span class="ansi-green-intense-fg ansi-bold">     22</span> from tensorflow.python.data.ops.dataset_ops import AUTOTUNE
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.data.ops.dataset_ops import Dataset
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/__init__.py:97</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """Experimental API for building input pipelines.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> This module contains experimental `Dataset` sources and transformations that can
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     93</span> @@UNKNOWN_CARDINALITY
+<span class="ansi-green-intense-fg ansi-bold">     94</span> """
+<span class="ansi-green-intense-fg ansi-bold">     96</span> # pylint: disable=unused-import
+<span class="ansi-green-fg">---&gt; 97</span> from tensorflow.python.data.experimental import service
+<span class="ansi-green-intense-fg ansi-bold">     98</span> from tensorflow.python.data.experimental.ops.batching import dense_to_ragged_batch
+<span class="ansi-green-intense-fg ansi-bold">     99</span> from tensorflow.python.data.experimental.ops.batching import dense_to_sparse_batch
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/service/__init__.py:419</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2020 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """API for using the tf.data service.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> This module contains:
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    416</span>   job of ParameterServerStrategy).
+<span class="ansi-green-intense-fg ansi-bold">    417</span> """
+<span class="ansi-green-fg">--&gt; 419</span> from tensorflow.python.data.experimental.ops.data_service_ops import distribute
+<span class="ansi-green-intense-fg ansi-bold">    420</span> from tensorflow.python.data.experimental.ops.data_service_ops import from_dataset_id
+<span class="ansi-green-intense-fg ansi-bold">    421</span> from tensorflow.python.data.experimental.ops.data_service_ops import register_dataset
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/ops/data_service_ops.py:22</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> from tensorflow.core.protobuf import data_service_pb2
+<span class="ansi-green-intense-fg ansi-bold">     21</span> from tensorflow.python import tf2
+<span class="ansi-green-fg">---&gt; 22</span> from tensorflow.python.data.experimental.ops import compression_ops
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.data.experimental.service import _pywrap_server_lib
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.data.experimental.service import _pywrap_utils
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/ops/compression_ops.py:16</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2020 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """Ops for compressing and uncompressing dataset elements."""
+<span class="ansi-green-fg">---&gt; 16</span> from tensorflow.python.data.util import structure
+<span class="ansi-green-intense-fg ansi-bold">     17</span> from tensorflow.python.ops import gen_experimental_dataset_ops as ged_ops
+<span class="ansi-green-intense-fg ansi-bold">     20</span> def compress(element):
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/util/structure.py:22</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> import itertools
+<span class="ansi-green-intense-fg ansi-bold">     20</span> import wrapt
+<span class="ansi-green-fg">---&gt; 22</span> from tensorflow.python.data.util import nest
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.framework import composite_tensor
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.framework import ops
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/util/nest.py:34</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     16</span> """## Functions for working with arbitrarily nested sequences of elements.
+<span class="ansi-green-intense-fg ansi-bold">     17</span> 
+<span class="ansi-green-intense-fg ansi-bold">     18</span> NOTE(mrry): This fork of the `tensorflow.python.util.nest` module
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span>    arrays.
+<span class="ansi-green-intense-fg ansi-bold">     32</span> """
+<span class="ansi-green-fg">---&gt; 34</span> from tensorflow.python.framework import sparse_tensor as _sparse_tensor
+<span class="ansi-green-intense-fg ansi-bold">     35</span> from tensorflow.python.util import _pywrap_utils
+<span class="ansi-green-intense-fg ansi-bold">     36</span> from tensorflow.python.util import nest
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/sparse_tensor.py:25</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python import tf2
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.framework import composite_tensor
+<span class="ansi-green-fg">---&gt; 25</span> from tensorflow.python.framework import constant_op
+<span class="ansi-green-intense-fg ansi-bold">     26</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     27</span> from tensorflow.python.framework import ops
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/constant_op.py:25</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.core.framework import types_pb2
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.eager import context
+<span class="ansi-green-fg">---&gt; 25</span> from tensorflow.python.eager import execute
+<span class="ansi-green-intense-fg ansi-bold">     26</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     27</span> from tensorflow.python.framework import op_callbacks
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/eager/execute.py:21</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> from tensorflow.python import pywrap_tfe
+<span class="ansi-green-intense-fg ansi-bold">     20</span> from tensorflow.python.eager import core
+<span class="ansi-green-fg">---&gt; 21</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     22</span> from tensorflow.python.framework import ops
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.framework import tensor_shape
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/dtypes.py:37</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span> from tensorflow.core.function import trace_type
+<span class="ansi-green-intense-fg ansi-bold">     35</span> from tensorflow.tools.docs import doc_controls
+<span class="ansi-green-fg">---&gt; 37</span> _np_bfloat16 = _pywrap_bfloat16.TF_bfloat16_type()
+<span class="ansi-green-intense-fg ansi-bold">     38</span> _np_float8_e4m3fn = _pywrap_float8.TF_float8_e4m3fn_type()
+<span class="ansi-green-intense-fg ansi-bold">     39</span> _np_float8_e5m2 = _pywrap_float8.TF_float8_e5m2_type()
+
+<span class="ansi-red-fg">TypeError</span>: Unable to convert function return value to a Python type! The signature was
+	() -&gt; handle</pre>
 </div>
 </div>
 
@@ -808,12 +943,15 @@ test_images and test_labels arrays test the accuracy</p>
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb Cell 31</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X42sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> train_images.shape
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(60000, 28, 28)</pre>
+<span class="ansi-red-fg">NameError</span>: name 'train_images' is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -849,12 +987,15 @@ test_images and test_labels arrays test the accuracy</p>
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb Cell 33</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X44sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> len(train_labels)
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>60000</pre>
+<span class="ansi-red-fg">NameError</span>: name 'train_labels' is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -890,12 +1031,15 @@ test_images and test_labels arrays test the accuracy</p>
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb Cell 35</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#X46sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> train_labels
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([9, 0, 0, ..., 3, 0, 5], dtype=uint8)</pre>
+<span class="ansi-red-fg">NameError</span>: name 'train_labels' is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -1204,64 +1348,6 @@ test_images and test_labels arrays test the accuracy</p>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 1/10
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>2023-04-04 11:53:51.070373: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 188160000 exceeds 10% of free system memory.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1875/1875 [==============================] - 11s 6ms/step - loss: 0.4959 - accuracy: 0.8268
-Epoch 2/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.3762 - accuracy: 0.8651
-Epoch 3/10
-1875/1875 [==============================] - 10s 6ms/step - loss: 0.3361 - accuracy: 0.8778
-Epoch 4/10
-1875/1875 [==============================] - 10s 6ms/step - loss: 0.3130 - accuracy: 0.8860
-Epoch 5/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.2946 - accuracy: 0.8903
-Epoch 6/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.2816 - accuracy: 0.8958
-Epoch 7/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.2679 - accuracy: 0.9011
-Epoch 8/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.2578 - accuracy: 0.9027
-Epoch 9/10
-1875/1875 [==============================] - 10s 5ms/step - loss: 0.2494 - accuracy: 0.9062
-Epoch 10/10
-1875/1875 [==============================] - 11s 6ms/step - loss: 0.2393 - accuracy: 0.9107
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f41ac3327f0&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1912,6 +1998,215 @@ Test accuracy: 0.8907999992370605
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+
+<span class="c1"># Load MNIST dataset</span>
+<span class="n">mnist</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mnist</span>
+<span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">),</span> <span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+<span class="c1"># Preprocess the data</span>
+<span class="n">train_images</span> <span class="o">=</span> <span class="n">train_images</span> <span class="o">/</span> <span class="mf">255.0</span>
+<span class="n">test_images</span> <span class="o">=</span> <span class="n">test_images</span> <span class="o">/</span> <span class="mf">255.0</span>
+
+<span class="c1"># Define the model architecture</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'softmax'</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="c1"># Compile the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">'adam'</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">'sparse_categorical_crossentropy'</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">'accuracy'</span><span class="p">])</span>
+
+<span class="c1"># Train the model</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="c1"># Evaluate the model on the test set</span>
+<span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Test accuracy:'</span><span class="p">,</span> <span class="n">test_acc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb Cell 82</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#Y144sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import tensorflow as tf
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#Y144sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> from tensorflow import keras
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/shivansh/devops/_notebooks/2023-04-03-TenserFlow.ipynb#Y144sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> # Load MNIST dataset
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/__init__.py:37</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span> import sys as _sys
+<span class="ansi-green-intense-fg ansi-bold">     35</span> import typing as _typing
+<span class="ansi-green-fg">---&gt; 37</span> from tensorflow.python.tools import module_util as _module_util
+<span class="ansi-green-intense-fg ansi-bold">     38</span> from tensorflow.python.util.lazy_loader import LazyLoader as _LazyLoader
+<span class="ansi-green-intense-fg ansi-bold">     40</span> # Make sure code inside the TensorFlow codebase can use tf2.enabled() at import.
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/__init__.py:42</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     37</span> from tensorflow.python.eager import context
+<span class="ansi-green-intense-fg ansi-bold">     39</span> # pylint: enable=wildcard-import
+<span class="ansi-green-intense-fg ansi-bold">     40</span> 
+<span class="ansi-green-intense-fg ansi-bold">     41</span> # Bring in subpackages.
+<span class="ansi-green-fg">---&gt; 42</span> from tensorflow.python import data
+<span class="ansi-green-intense-fg ansi-bold">     43</span> from tensorflow.python import distribute
+<span class="ansi-green-intense-fg ansi-bold">     44</span> # from tensorflow.python import keras
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/__init__.py:21</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """`tf.data.Dataset` API for input pipelines.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> See [Importing Data](https://tensorflow.org/guide/data) for an overview.
+<span class="ansi-green-intense-fg ansi-bold">     18</span> """
+<span class="ansi-green-intense-fg ansi-bold">     20</span> # pylint: disable=unused-import
+<span class="ansi-green-fg">---&gt; 21</span> from tensorflow.python.data import experimental
+<span class="ansi-green-intense-fg ansi-bold">     22</span> from tensorflow.python.data.ops.dataset_ops import AUTOTUNE
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.data.ops.dataset_ops import Dataset
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/__init__.py:97</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """Experimental API for building input pipelines.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> This module contains experimental `Dataset` sources and transformations that can
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     93</span> @@UNKNOWN_CARDINALITY
+<span class="ansi-green-intense-fg ansi-bold">     94</span> """
+<span class="ansi-green-intense-fg ansi-bold">     96</span> # pylint: disable=unused-import
+<span class="ansi-green-fg">---&gt; 97</span> from tensorflow.python.data.experimental import service
+<span class="ansi-green-intense-fg ansi-bold">     98</span> from tensorflow.python.data.experimental.ops.batching import dense_to_ragged_batch
+<span class="ansi-green-intense-fg ansi-bold">     99</span> from tensorflow.python.data.experimental.ops.batching import dense_to_sparse_batch
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/service/__init__.py:419</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2020 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """API for using the tf.data service.
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> This module contains:
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    416</span>   job of ParameterServerStrategy).
+<span class="ansi-green-intense-fg ansi-bold">    417</span> """
+<span class="ansi-green-fg">--&gt; 419</span> from tensorflow.python.data.experimental.ops.data_service_ops import distribute
+<span class="ansi-green-intense-fg ansi-bold">    420</span> from tensorflow.python.data.experimental.ops.data_service_ops import from_dataset_id
+<span class="ansi-green-intense-fg ansi-bold">    421</span> from tensorflow.python.data.experimental.ops.data_service_ops import register_dataset
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/ops/data_service_ops.py:22</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> from tensorflow.core.protobuf import data_service_pb2
+<span class="ansi-green-intense-fg ansi-bold">     21</span> from tensorflow.python import tf2
+<span class="ansi-green-fg">---&gt; 22</span> from tensorflow.python.data.experimental.ops import compression_ops
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.data.experimental.service import _pywrap_server_lib
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.data.experimental.service import _pywrap_utils
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/experimental/ops/compression_ops.py:16</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2020 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     15</span> """Ops for compressing and uncompressing dataset elements."""
+<span class="ansi-green-fg">---&gt; 16</span> from tensorflow.python.data.util import structure
+<span class="ansi-green-intense-fg ansi-bold">     17</span> from tensorflow.python.ops import gen_experimental_dataset_ops as ged_ops
+<span class="ansi-green-intense-fg ansi-bold">     20</span> def compress(element):
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/util/structure.py:22</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> import itertools
+<span class="ansi-green-intense-fg ansi-bold">     20</span> import wrapt
+<span class="ansi-green-fg">---&gt; 22</span> from tensorflow.python.data.util import nest
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.framework import composite_tensor
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.framework import ops
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/data/util/nest.py:34</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> # Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+<span class="ansi-green-intense-fg ansi-bold">      2</span> #
+<span class="ansi-green-intense-fg ansi-bold">      3</span> # Licensed under the Apache License, Version 2.0 (the "License");
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # limitations under the License.
+<span class="ansi-green-intense-fg ansi-bold">     14</span> # ==============================================================================
+<span class="ansi-green-intense-fg ansi-bold">     16</span> """## Functions for working with arbitrarily nested sequences of elements.
+<span class="ansi-green-intense-fg ansi-bold">     17</span> 
+<span class="ansi-green-intense-fg ansi-bold">     18</span> NOTE(mrry): This fork of the `tensorflow.python.util.nest` module
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span>    arrays.
+<span class="ansi-green-intense-fg ansi-bold">     32</span> """
+<span class="ansi-green-fg">---&gt; 34</span> from tensorflow.python.framework import sparse_tensor as _sparse_tensor
+<span class="ansi-green-intense-fg ansi-bold">     35</span> from tensorflow.python.util import _pywrap_utils
+<span class="ansi-green-intense-fg ansi-bold">     36</span> from tensorflow.python.util import nest
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/sparse_tensor.py:25</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python import tf2
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.framework import composite_tensor
+<span class="ansi-green-fg">---&gt; 25</span> from tensorflow.python.framework import constant_op
+<span class="ansi-green-intense-fg ansi-bold">     26</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     27</span> from tensorflow.python.framework import ops
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/constant_op.py:25</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.core.framework import types_pb2
+<span class="ansi-green-intense-fg ansi-bold">     24</span> from tensorflow.python.eager import context
+<span class="ansi-green-fg">---&gt; 25</span> from tensorflow.python.eager import execute
+<span class="ansi-green-intense-fg ansi-bold">     26</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     27</span> from tensorflow.python.framework import op_callbacks
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/eager/execute.py:21</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> from tensorflow.python import pywrap_tfe
+<span class="ansi-green-intense-fg ansi-bold">     20</span> from tensorflow.python.eager import core
+<span class="ansi-green-fg">---&gt; 21</span> from tensorflow.python.framework import dtypes
+<span class="ansi-green-intense-fg ansi-bold">     22</span> from tensorflow.python.framework import ops
+<span class="ansi-green-intense-fg ansi-bold">     23</span> from tensorflow.python.framework import tensor_shape
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/tensorflow/python/framework/dtypes.py:37</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span> from tensorflow.core.function import trace_type
+<span class="ansi-green-intense-fg ansi-bold">     35</span> from tensorflow.tools.docs import doc_controls
+<span class="ansi-green-fg">---&gt; 37</span> _np_bfloat16 = _pywrap_bfloat16.TF_bfloat16_type()
+<span class="ansi-green-intense-fg ansi-bold">     38</span> _np_float8_e4m3fn = _pywrap_float8.TF_float8_e4m3fn_type()
+<span class="ansi-green-intense-fg ansi-bold">     39</span> _np_float8_e5m2 = _pywrap_float8.TF_float8_e5m2_type()
+
+<span class="ansi-red-fg">TypeError</span>: Unable to convert function return value to a Python type! The signature was
+	() -&gt; handle</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
