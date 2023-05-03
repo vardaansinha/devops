@@ -32,7 +32,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Inspect Variables - **can be used to programmatically access and retrieve information about variables, functions, classes, and other objects during runtime.**
 
 
-![]({{site.baseurl}}/images/computernetwork1.PNG "Pic")
+![]({{site.baseurl}}/images/mcq2020.PNG "Pic")
 
 
 ### The Internet
