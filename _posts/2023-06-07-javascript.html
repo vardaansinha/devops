@@ -1,0 +1,45 @@
+%%html
+<!-- load jQuery and tablesorter scripts -->
+<!-- this doesn't work in jupyter but will work in GitHub pages -->
+<html>
+    <head>
+        <!-- load jQuery and DataTables syle and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!--<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.noConflict();
+            console.log("Loading table data");
+            $('#premierleague').DataTable({
+                // read data from the ajax request
+                ajax: 'https://tri3dev.duckdns.org/api/premierleagueplayer/',
+                // use follow columns 
+                columns: [{"title":"name"},
+                    {"title":"team"},
+                    {"title":"position"},
+                    {"title":"jersey_number"},
+                    {"title":"age"},
+                    {"title":"height"},
+                    {"title":"weight"},
+                    {"title":"goals"},
+                    {"title":"assists"},
+                    {"title":"yellow_cards"},
+                    {"title":"red_cards"},
+                    {"title":"passes_completed"},
+                    {"title":"tackles"},
+                    {"title":"clean_sheets"}]
+            });
+        });
+  </script>
+    
+    </head>
+
+    <body>
+<!--defines the tableID that is going to be referred to in the future-->
+<table id="premierleague">
+<!-- no need to define table header here, DataTable will take care of it -->
+</table>
+
+</body>
+</html>
