@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | DevOps project for AP CSP</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)" />
+<meta property="og:description" content="devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)" />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/2023/06/07/javascriptextra.html" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/2023/06/07/javascriptextra.html" />
+<meta property="og:site_name" content="DevOps project for AP CSP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-07T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-06-07T00:00:00-05:00","datePublished":"2023-06-07T00:00:00-05:00","description":"devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/2023/06/07/javascriptextra.html"},"url":"https://tri3devopteam.github.io/devops/2023/06/07/javascriptextra.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps project for AP CSP" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/ezgif.com-webp-to-png.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devops/">DevOps project for AP CSP</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-06-07T00:00:00-05:00" itemprop="datePublished">
+        Jun 7, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/tri-3-group-fastpages-devops-/tree/master/_notebooks/2023-06-07-javascriptextra.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/devops/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/tri-3-group-fastpages-devops-/master?filepath=_notebooks%2F2023-06-07-javascriptextra.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/tri-3-group-fastpages-devops-/blob/master/_notebooks/2023-06-07-javascriptextra.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devops/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftri-3-group-fastpages-devops-%2Fblob%2Fmaster%2F_notebooks%2F2023-06-07-javascriptextra.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/devops/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-06-07-javascriptextra.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="c">&lt;!-- load jQuery and tablesorter scripts --&gt;</span>
+<span class="c">&lt;!-- this doesn&#39;t work in jupyter but will work in GitHub pages --&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- load jQuery and DataTables syle and scripts --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css&quot;</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;https://code.jquery.com/jquery-3.5.1.js&quot;&gt;&lt;/script&gt;--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Loading table data&quot;</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#premierleague&#39;</span><span class="p">).</span><span class="nx">DataTable</span><span class="p">({</span>
+                <span class="c1">// read data from the ajax request</span>
+                <span class="nx">ajax</span><span class="o">:</span> <span class="s1">&#39;https://tri3dev.duckdns.org/api/premierleagueplayer/&#39;</span><span class="p">,</span>
+                <span class="c1">// use follow columns </span>
+                <span class="nx">columns</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;name&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;team&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;position&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;jersey_number&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;age&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;height&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;weight&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;goals&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;assists&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;yellow_cards&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;red_cards&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;passes_completed&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;tackles&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;clean_sheets&quot;</span><span class="p">}]</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="c">&lt;!--defines the tableID that is going to be referred to in the future--&gt;</span>
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;premierleague&quot;</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- no need to define table header here, DataTable will take care of it --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<!-- load jQuery and tablesorter scripts -->
+<!-- this doesn't work in jupyter but will work in GitHub pages -->
+<html>
+    <head>
+        <!-- load jQuery and DataTables syle and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+    <!--<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.noConflict();
+            console.log("Loading table data");
+            $('#premierleague').DataTable({
+                // read data from the ajax request
+                ajax: 'https://tri3dev.duckdns.org/api/premierleagueplayer/',
+                // use follow columns 
+                columns: [{"title":"name"},
+                    {"title":"team"},
+                    {"title":"position"},
+                    {"title":"jersey_number"},
+                    {"title":"age"},
+                    {"title":"height"},
+                    {"title":"weight"},
+                    {"title":"goals"},
+                    {"title":"assists"},
+                    {"title":"yellow_cards"},
+                    {"title":"red_cards"},
+                    {"title":"passes_completed"},
+                    {"title":"tackles"},
+                    {"title":"clean_sheets"}]
+            });
+        });
+  </script>
+    
+    </head>
+
+    <body>
+<!--defines the tableID that is going to be referred to in the future-->
+<table id="premierleague">
+<!-- no need to define table header here, DataTable will take care of it -->
+</table>
+
+</body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/devops/2023/06/07/javascriptextra.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devops/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://tri3devopteam.github.io/devops/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devops/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

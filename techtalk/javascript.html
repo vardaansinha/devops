@@ -70,7 +70,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      15 min read
     
 </span></p>
 
@@ -285,10 +285,10 @@ window.onload = wrap_img;
 
 
 
-<div id="3d8932e4-dc5d-4065-af97-ff2402fc87b7"></div>
+<div id="17630c8d-5cce-4a03-b910-4cf3b683fefb"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#3d8932e4-dc5d-4065-af97-ff2402fc87b7');
+var element = $('#17630c8d-5cce-4a03-b910-4cf3b683fefb');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -361,10 +361,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="c000009c-bf6e-4f85-9a7a-3096a11ae90e"></div>
+<div id="c61a6633-c424-465d-bcde-476ae6513cf6"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#c000009c-bf6e-4f85-9a7a-3096a11ae90e');
+var element = $('#c61a6633-c424-465d-bcde-476ae6513cf6');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -446,10 +446,10 @@ element.text(msg);
 
 
 
-<div id="0f8447f9-c876-400c-ba89-695e887bb19c"></div>
+<div id="e84830cb-2d53-4321-bbb0-e881a797cd04"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#0f8447f9-c876-400c-ba89-695e887bb19c');
+var element = $('#e84830cb-2d53-4321-bbb0-e881a797cd04');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -557,10 +557,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="3b6de917-459c-4aa8-8c84-cc982580f103"></div>
+<div id="66fa3c4f-859a-4a33-aaf4-e695860cc6a9"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#3b6de917-459c-4aa8-8c84-cc982580f103');
+var element = $('#66fa3c4f-859a-4a33-aaf4-e695860cc6a9');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -809,10 +809,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="2b6e1bf5-5471-42ea-8d59-98752ed2e7b0"></div>
+<div id="27399791-ec71-4438-93ce-0d23a4c0d229"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#2b6e1bf5-5471-42ea-8d59-98752ed2e7b0');
+var element = $('#27399791-ec71-4438-93ce-0d23a4c0d229');
 console.log("Person objects");
 
 /* class: Person
@@ -904,18 +904,21 @@ student.logIt(); // log to console
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="c1">// Setting the class Premier with constructors</span>
 <span class="kr">class</span> <span class="nx">Premier</span> <span class="p">{</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">team</span><span class="p">,</span> <span class="nx">ranking</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">team</span><span class="p">,</span> <span class="nx">ranking</span><span class="p">,</span> <span class="nx">goals</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">team</span> <span class="o">=</span> <span class="nx">team</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">rankig</span> <span class="o">=</span> <span class="nx">ranking</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ranking</span> <span class="o">=</span> <span class="nx">ranking</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">goals</span> <span class="o">=</span> <span class="nx">goals</span><span class="p">;</span>
   <span class="p">}</span>
-
+<span class="c1">// Setting up the getJSON method with the const jsonString</span>
   <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">jsonString</span> <span class="o">=</span> <span class="p">{</span>
       <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
       <span class="nx">team</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">team</span><span class="p">,</span>
       <span class="nx">ranking</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ranking</span><span class="p">,</span>
+      <span class="nx">goals</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">goals</span><span class="p">,</span>
      
     <span class="p">};</span>
     <span class="kr">const</span> <span class="nx">jsonObj</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
@@ -931,14 +934,16 @@ student.logIt(); // log to console
 <span class="kr">const</span> <span class="nx">Playerdata</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Erling Haaland&quot;</span><span class="p">,</span>
   <span class="nx">team</span><span class="o">:</span> <span class="s2">&quot;Manchester City&quot;</span><span class="p">,</span>
-  <span class="nx">ranking</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>   
+  <span class="nx">ranking</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+  <span class="nx">goals</span><span class="o">:</span> <span class="mf">38</span><span class="p">,</span>
 <span class="p">};</span>
 
 
 <span class="kr">const</span> <span class="nx">js</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Premier</span><span class="p">(</span>
   <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
   <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">team</span><span class="p">,</span>
-  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">ranking</span>
+  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">ranking</span><span class="p">,</span>
+  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">goals</span>
 <span class="p">);</span>
 
 <span class="nx">js</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>
@@ -956,15 +961,16 @@ student.logIt(); // log to console
 
 
 
-<div id="bf3a51d1-fbe4-4947-86d6-970890a59734"></div>
+<div id="3c1673dc-9304-49e0-b706-c1ac98942217"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#bf3a51d1-fbe4-4947-86d6-970890a59734');
+var element = $('#3c1673dc-9304-49e0-b706-c1ac98942217');
 class Premier {
-  constructor(name, team, ranking) {
+  constructor(name, team, ranking, goals) {
     this.name = name;
     this.team = team;
-    this.rankig = ranking;
+    this.ranking = ranking;
+    this.goals = goals;
   }
 
   getJSON() {
@@ -972,6 +978,7 @@ class Premier {
       name: this.name,
       team: this.team,
       ranking: this.ranking,
+      goals: this.goals,
      
     };
     const jsonObj = JSON.stringify(jsonString);
@@ -987,14 +994,16 @@ class Premier {
 const Playerdata = {
   name: "Erling Haaland",
   team: "Manchester City",
-  ranking: 1,   
+  ranking: 1,
+  goals: 38,
 };
 
 
 const js = new Premier(
   Playerdata.name,
   Playerdata.team,
-  Playerdata.ranking
+  Playerdata.ranking,
+  Playerdata.goals
 );
 
 js.logIt();
@@ -1047,7 +1056,7 @@ js.logIt();
         <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;jsonTable&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>NBA PLAYER JSON Data<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Premier League Data/th&gt;
                 <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
             <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
@@ -1056,7 +1065,7 @@ js.logIt();
                         &quot;player&quot;: [
                           {
                             &quot;name&quot;: &quot;Erling Haaland&quot;,
-                            &quot;team&quot;: &quot;Los Angeles Lakers&quot;,
+                            &quot;team&quot;: &quot;Manchester City&quot;,
                             &quot;ranking&quot;: 1,
                           },
                           {
@@ -1099,9 +1108,9 @@ js.logIt();
         <table id="jsonTable">
             <thead>
                 <tr>
-                    <th>NBA PLAYER JSON Data</th>
-                </tr>
-            </thead>
+                    <th>Premier League Data/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
             <tbody>
                 <tr>
                     <td id="jsonText">{
@@ -1121,19 +1130,19 @@ js.logIt();
                       </td>
                 </tr>
             </tbody>
-        </table>
+        &lt;/table&gt;
 
-    </body>
-</html>
+    &lt;/body&gt;
+&lt;/html&gt;
 
-</div>
+&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
 
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
     
 
     
@@ -1153,33 +1162,82 @@ js.logIt();
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;team&#39;)&quot;</span><span class="p">&gt;</span>Team<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;goals per game&#39;)&quot;</span><span class="p">&gt;</span>Goals Per Game<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;games played&#39;)&quot;</span><span class="p">&gt;</span>Games Played<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;height&#39;)&quot;</span><span class="p">&gt;</span>Height (inches)<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;height&#39;)&quot;</span><span class="p">&gt;</span>Height<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;passes&#39;)&quot;</span><span class="p">&gt;</span>Passess<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;ranking&#39;)&quot;</span><span class="p">&gt;</span>Ranking<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;weight&#39;)&quot;</span><span class="p">&gt;</span>Weight<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-   # sample data following on frontend, just for demo.
       <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Erling Haaland<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester City<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>44<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>180<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>276<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>210<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kevin De Bruyne<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester City<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>81<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>56<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>845<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>179<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Bruno Fernandes<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester United<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>764<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>15<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>167<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Harry Kane<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Tottneham<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.9<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>321<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>184<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Son<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Tottneham<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.8<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>453<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>171<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Harry Maguire<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester United<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>567<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>27<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>195<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Marcus Rashford<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester United<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>.6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>345<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>31<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>182<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
   
@@ -1201,6 +1259,7 @@ js.logIt();
   <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">table</span><span class="p">.</span><span class="nx">tBodies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">));</span>
   <span class="kr">const</span> <span class="nx">headerRow</span> <span class="o">=</span> <span class="nx">table</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
   <span class="kr">const</span> <span class="nx">isAscending</span> <span class="o">=</span> <span class="o">!</span><span class="nx">headerRow</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;asc&#39;</span><span class="p">);</span>
+    <span class="c1">// This code will make sure that the asc class will dec</span>
       <span class="c1">// this is a very important line - the asc class helps the function decide whether or not the column is going to be sorted in increasing order or decreasing order.</span>
 
      <span class="nx">rows</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">rowA</span><span class="p">,</span> <span class="nx">rowB</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -1250,33 +1309,82 @@ js.logIt();
         <th onclick="sortTable('team')">Team</th>
         <th onclick="sortTable('goals per game')">Goals Per Game</th>
         <th onclick="sortTable('games played')">Games Played</th>
-        <th onclick="sortTable('height')">Height (inches)</th>
+        <th onclick="sortTable('height')">Height</th>
         <th onclick="sortTable('passes')">Passess</th>
         <th onclick="sortTable('ranking')">Ranking</th>
         <th onclick="sortTable('weight')">Weight</th>
       </tr>
     </thead>
     <tbody>
-   # sample data following on frontend, just for demo.
       <tr>
         <td>Erling Haaland</td>
         <td>Manchester City</td>
         <td>2</td>
         <td>35</td>
         <td>88</td>
-        <td>5</td>
-        <td>44</td>
-        <td>180</td>
+        <td>276</td>
+        <td>1</td>
+        <td>210</td>
       </tr>
       <tr>
         <td>Kevin De Bruyne</td>
         <td>Manchester City</td>
-        <td>3</td>
+        <td>.4</td>
         <td>33</td>
         <td>81</td>
-        <td>7</td>
-        <td>56</td>
+        <td>845</td>
+        <td>4</td>
         <td>179</td>
+      </tr>
+     <tr>
+        <td>Bruno Fernandes</td>
+        <td>Manchester United</td>
+        <td>.3</td>
+        <td>35</td>
+        <td>88</td>
+        <td>764</td>
+        <td>15</td>
+        <td>167</td>
+      </tr>
+     <tr>
+        <td>Harry Kane</td>
+        <td>Tottneham</td>
+        <td>.9</td>
+        <td>35</td>
+        <td>88</td>
+        <td>321</td>
+        <td>7</td>
+        <td>184</td>
+      </tr>
+    <tr>
+        <td>Son</td>
+        <td>Tottneham</td>
+        <td>.8</td>
+        <td>35</td>
+        <td>88</td>
+        <td>453</td>
+        <td>6</td>
+        <td>171</td>
+      </tr>
+    <tr>
+        <td>Harry Maguire</td>
+        <td>Manchester United</td>
+        <td>.1</td>
+        <td>35</td>
+        <td>88</td>
+        <td>567</td>
+        <td>27</td>
+        <td>195</td>
+      </tr>
+    <tr>
+        <td>Marcus Rashford</td>
+        <td>Manchester United</td>
+        <td>.6</td>
+        <td>35</td>
+        <td>88</td>
+        <td>345</td>
+        <td>31</td>
+        <td>182</td>
       </tr>
   &lt;/table&gt;
   
@@ -1298,6 +1406,7 @@ function sortTable(columnName) {
   const rows = Array.from(table.tBodies[0].getElementsByTagName('tr'));
   const headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
   const isAscending = !headerRow.classList.contains('asc');
+    // This code will make sure that c
       // this is a very important line - the asc class helps the function decide whether or not the column is going to be sorted in increasing order or decreasing order.
 
      rows.sort((rowA, rowB) => {
@@ -1475,7 +1584,7 @@ function sortTable(columnName) {
 &lt;/div&gt;
  
 
-</tbody></table></div></div></div></div></div></div>
+</tbody></table></div></div></div></div></div></th></tr></thead></table></body></html></div></div></div></div></div></div>
 
 
   </div><a class="u-url" href="/devops/techtalk/javascript" hidden></a>
