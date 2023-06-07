@@ -285,10 +285,10 @@ window.onload = wrap_img;
 
 
 
-<div id="12ae9dae-5a90-42d9-b4e9-b9e0cd25273a"></div>
+<div id="3d8932e4-dc5d-4065-af97-ff2402fc87b7"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#12ae9dae-5a90-42d9-b4e9-b9e0cd25273a');
+var element = $('#3d8932e4-dc5d-4065-af97-ff2402fc87b7');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -361,10 +361,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="93ab790b-4220-4873-8561-fefaded34718"></div>
+<div id="c000009c-bf6e-4f85-9a7a-3096a11ae90e"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#93ab790b-4220-4873-8561-fefaded34718');
+var element = $('#c000009c-bf6e-4f85-9a7a-3096a11ae90e');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -446,10 +446,10 @@ element.text(msg);
 
 
 
-<div id="4b15329c-2639-4fda-8c02-64a697f87666"></div>
+<div id="0f8447f9-c876-400c-ba89-695e887bb19c"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4b15329c-2639-4fda-8c02-64a697f87666');
+var element = $('#0f8447f9-c876-400c-ba89-695e887bb19c');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -557,10 +557,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="3b0744af-0dac-4bac-a69e-c50a687d6b15"></div>
+<div id="3b6de917-459c-4aa8-8c84-cc982580f103"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#3b0744af-0dac-4bac-a69e-c50a687d6b15');
+var element = $('#3b6de917-459c-4aa8-8c84-cc982580f103');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -809,10 +809,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="1ad56564-b32a-46af-ba82-279e5199d2b4"></div>
+<div id="2b6e1bf5-5471-42ea-8d59-98752ed2e7b0"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#1ad56564-b32a-46af-ba82-279e5199d2b4');
+var element = $('#2b6e1bf5-5471-42ea-8d59-98752ed2e7b0');
 console.log("Person objects");
 
 /* class: Person
@@ -956,10 +956,10 @@ student.logIt(); // log to console
 
 
 
-<div id="55fe087d-e422-42c3-ac49-bd7e0f27def4"></div>
+<div id="bf3a51d1-fbe4-4947-86d6-970890a59734"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#55fe087d-e422-42c3-ac49-bd7e0f27def4');
+var element = $('#bf3a51d1-fbe4-4947-86d6-970890a59734');
 class Premier {
   constructor(name, team, ranking) {
     this.name = name;
@@ -1213,15 +1213,12 @@ js.logIt();
       <span class="k">return</span> <span class="nx">isAscending</span> <span class="o">?</span> <span class="nx">cellA</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">cellB</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensitivity</span><span class="o">:</span> <span class="s1">&#39;base&#39;</span> <span class="p">})</span> <span class="o">:</span> <span class="nx">cellB</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">cellA</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensitivity</span><span class="o">:</span> <span class="s1">&#39;base&#39;</span> <span class="p">});</span>
     <span class="p">}</span>
     
-    <span class="c1">// these were for special situations. the name and team columns were not sorting properly, so the localeCompare was used to sort the rows alphabetically. </span>
 
-    <span class="c1">// Convert the cell values to numbers for the &quot;Games Played&quot; column</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">columnName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;games played&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Convert the cell values to numbers </span>
+      
       <span class="nx">cellA</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">cellA</span><span class="p">);</span>
       <span class="nx">cellB</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">cellB</span><span class="p">);</span>
-    <span class="p">}</span>
-     <span class="c1">// games played was not sorting for some odd reason, which is why this if statement was added.</span>
-    <span class="c1">// purpose is to parse the values as an integer and then sort numerically. </span>
+      
     
     <span class="k">return</span> <span class="nx">isAscending</span> <span class="o">?</span> <span class="nx">cellA</span> <span class="o">-</span> <span class="nx">cellB</span> <span class="o">:</span> <span class="nx">cellB</span> <span class="o">-</span> <span class="nx">cellA</span><span class="p">;</span>
   <span class="p">});</span>
@@ -1272,7 +1269,7 @@ js.logIt();
         <td>180</td>
       </tr>
       <tr>
-        <td>Player1</td>
+        <td>Kevin De Bruyne</td>
         <td>Manchester City</td>
         <td>3</td>
         <td>33</td>
@@ -1313,22 +1310,18 @@ function sortTable(columnName) {
       return isAscending ? cellA.localeCompare(cellB, undefined, { sensitivity: 'base' }) : cellB.localeCompare(cellA, undefined, { sensitivity: 'base' });
     }
     
-    // these were for special situations. the name and team columns were not sorting properly, so the localeCompare was used to sort the rows alphabetically. 
 
-    // Convert the cell values to numbers for the "Games Played" column
-    if (columnName.toLowerCase() === 'games played') {
+    // Convert the cell values to numbers 
+      
       cellA = parseInt(cellA);
       cellB = parseInt(cellB);
-    }
-     // games played was not sorting for some odd reason, which is why this if statement was added.
-    // purpose is to parse the values as an integer and then sort numerically. 
+      
     
     return isAscending ? cellA - cellB : cellB - cellA;
   });
-  
+  // The code that follows: Will add the cell values into their sepecified table.
   rows.forEach(row => table.tBodies[0].appendChild(row));
   headerRow.classList.toggle('asc');
-  // this is meant for after sorting. after the sorting is done, the appendChild is meant to append these cell values back into the specified table.
 }
 
   </script>
