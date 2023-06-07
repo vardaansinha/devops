@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>JavaScript Tutorial | DevOps project for AP CSP</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="JavaScript Tutorial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quick launch into Variables, Functions, Arrays, Classes, HTML." />
+<meta property="og:description" content="Quick launch into Variables, Functions, Arrays, Classes, HTML." />
+<link rel="canonical" href="https://tri3devopteam.github.io/devops/techtalk/javascript" />
+<meta property="og:url" content="https://tri3devopteam.github.io/devops/techtalk/javascript" />
+<meta property="og:site_name" content="DevOps project for AP CSP" />
+<meta property="og:image" content="https://tri3devopteam.github.io/devops/images/javascript.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-19T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://tri3devopteam.github.io/devops/images/javascript.png" />
+<meta property="twitter:title" content="JavaScript Tutorial" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-19T00:00:00-05:00","datePublished":"2022-09-19T00:00:00-05:00","description":"Quick launch into Variables, Functions, Arrays, Classes, HTML.","headline":"JavaScript Tutorial","image":"https://tri3devopteam.github.io/devops/images/javascript.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://tri3devopteam.github.io/devops/techtalk/javascript"},"url":"https://tri3devopteam.github.io/devops/techtalk/javascript"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devops/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tri3devopteam.github.io/devops/feed.xml" title="DevOps project for AP CSP" /><link rel="shortcut icon" type="image/x-icon" href="/devops/images/ezgif.com-webp-to-png.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devops/">DevOps project for AP CSP</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">JavaScript Tutorial</h1><p class="page-description">Quick launch into Variables, Functions, Arrays, Classes, HTML.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-19T00:00:00-05:00" itemprop="datePublished">
+        Sep 19, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+          <a class="category-tags-link" href="/devops/categories/ap#1.A">1.A</a>
+        
+        &nbsp;
+      
+          <a class="category-tags-link" href="/devops/categories/ap#3.B">3.B</a>
+        
+        &nbsp;
+      
+          <a class="category-tags-link" href="/devops/categories/cte#C4.0">C4.0</a>
+        
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-19-PBL-javascript_tutorial.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><table>
+    <tr>
+        <td><img src="/devops//images/logo.png" height="60" title="Frontend" alt="" /></td>
+        <td><a href="/devops/frontend/overview">Overview</a></td>
+        <td><a href="/devops/techtalk/javascript">Tutorial</a></td>
+        <td><a href="/devops/frontend/calculator">Calculator</a></td>
+        <td><a href="/devops/frontend/binary">Binary</a></td>
+        <td><a href="/devops/frontend/grades">Grades</a></td>
+        <td><a href="/devops/frontend/graph">Graph</a></td>
+        <td><a href="/devops/frontend/life">Life</a></td>
+        <td><a href="/devops/frontend/snake">Snake</a></td>
+    </tr>
+</table></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JavaScript-and-Jupyter-references">JavaScript and Jupyter references<a class="anchor-link" href="#JavaScript-and-Jupyter-references"> </a></h2><blockquote><p>JavaScript is the most important language you need to learn as a frontend developer.  Jupyter Notebooks is a convenient way to learn the language without the overhead of creating a full Website.  Jupyter Notebooks had ChatGPT plugins to assist with design and troubleshooting problems.  This Notebook has colors on HTML pages that were designed with a dark mode background.</p>
+</blockquote>
+<ul>
+<li><p>JavaScript / Jupyter General References</p>
+<ul>
+<li><a href="https://www.w3schools.com/js/">W3Schools JS Reference</a>    - ChatGPT AI assistant for <a href="https://chrome.google.com/webstore/detail/chatgpt-jupyter-ai-assist/dlipncbkjmjjdpgcnodkbdobkadiejll">Chrome/Jupyter</a> </li>
+<li>Theme setup for Jupyter <a href="https://linuxhint.com/change-theme-jupyter-notebook/">Article</a>.  Or do these commands from shell...<ul>
+<li>Install pip: pip install jupyterthemes</li>
+<li>Revert to original theme: jt -r </li>
+<li>List themes: jt -l</li>
+<li>Install with Theme, Name, Logo: jt -t onedork -T -N -kl</li>
+</ul>
+</li>
+<li><a href="https://developer.chrome.com/docs/devtools/">Chrome Dev Tools</a></li>
+</ul>
+</li>
+<li><p>Coding with jQuery</p>
+<ul>
+<li>Jupyter Notebook <a href="https://github.com/nighthawkcoders/APCSP/blob/master/_notebooks/2022-09-19-PBL-javascript_tutorial.ipynb">GitHub</a>, wget: <a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2022-09-19-PBL-javascript_tutorial.ipynb">https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2022-09-19-PBL-javascript_tutorial.ipynb</a></li>
+<li>Markdown <a href="https://nighthawkcoders.github.io/APCSP/frontend/jquery">Fetch example</a> in GitHub project for <a href="https://github.com/nighthawkcoders/APCSP/blob/master/_posts/2023-06-01-jquery-sort.md">APCSP</a></li>
+<li>HTML <a href="https://flask.nighthawkcodingsociety.com/table/">Static example</a> in GitHub project for <a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/templates/table.html">flask_portfolio</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="output-using-HTML-and-CSS">output using HTML and CSS<a class="anchor-link" href="#output-using-HTML-and-CSS"> </a></h3><p>Multiple cells are used to setup HTML in this lesson. Many of the JavaScript cells will use the output tag(s) to write into the HTML that has been setup.</p>
+<ul>
+<li>%%html is used to setup HTML code block</li>
+<li>"style" tag enables visuals customization</li>
+<li>"div" tag is setup to receive data</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+            <span class="p">#</span><span class="nn">output</span> <span class="p">{</span>
+                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#353b45</span><span class="p">;</span>
+                <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+                <span class="k">border</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;output&quot;</span><span class="p">&gt;</span>
+            Hello!
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<html>
+    <head>
+        <style>
+            #output {
+                background-color: #353b45;
+                padding: 10px;
+                border: 3px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+            Hello!
+        </div>
+    </body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="output-explored">output explored<a class="anchor-link" href="#output-explored"> </a></h3><p>There are several ways to ouput the classic introduction message: "Hello, World!"</p>
+<ul>
+<li>Before you go further, open Console on your Browser. <mark>JavaScript developer leaves Console open</mark> all the time!!!</li>
+<li>The function <mark>console.log()</mark> outputs to Console, this is often used for inspection or debugging.</li>
+<li>"Hello, World" is a String literal. This is the referred to as <mark>Static text</mark>, as it does not change.  Developer call this a <mark>hard coded string</mark>.</li>
+<li><mark>"Hello, World" literal is a parameter</mark> to console.log(), element.txt() and alert().</li>
+<li>The element.txt function is part of <mark>Jupyter Notebook %%js magic</mark>.  This is convenient for Notebook and testing.</li>
+<li>The <mark>alert command outputs the parameter to a dialog box</mark>, so you can see it in this Jupyter notebook. The alert commands are shown, but are commented out as the stop run all execution of the notebook.</li>
+<li>Note, in a Web Application Debugging: An alert is often used for less savy Developers. Console is used by more savy developers; console often requires setting up a lot of outputs. Source level debugging is the most powerful solution for debugging and does not require alert or console commands.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span> // required to allow cell to be JavaScript enabled
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;JavaScript/Jupyter Output Intro&quot;</span><span class="p">);</span>
+
+<span class="c1">// Browser Console output; debugging or tracing</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, World Again!&quot;</span><span class="p">);</span>
+
+<span class="c1">// Document Object Model (DOM) output; output to HTML, CSS which is standard for a Web Page</span>
+<span class="c1">// &lt;mark&gt;select element method&lt;/mark&gt;: DOM native JavaScript get, document.getElementByID</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<span class="c1">// &lt;mark&gt;jQuery CSS-style method&lt;/mark&gt;: Tag for DOM selector, $(&#39;#output&#39;)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#output&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;br&gt;&lt;b&gt;Hello World Again!&#39;</span><span class="p">);</span>  <span class="c1">// br is break or new line, b is bold</span>
+
+<span class="c1">// Jupyter built in magic element for testing and convenience of development</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span> <span class="c1">// element is output option as part of %%js magic</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;br&gt;&lt;b&gt;Hello World Again!&#39;</span><span class="p">);</span>
+
+<span class="c1">//alert(&quot;Hello, World!&quot;);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="12ae9dae-5a90-42d9-b4e9-b9e0cd25273a"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#12ae9dae-5a90-42d9-b4e9-b9e0cd25273a');
+console.log("JavaScript/Jupyter Output Intro");
+
+// Browser Console output; debugging or tracing
+console.log("Hello, World!");
+console.log("Hello, World Again!");
+
+// Document Object Model (DOM) output; output to HTML, CSS which is standard for a Web Page
+// <mark>select element method</mark>: DOM native JavaScript get, document.getElementByID
+document.getElementById("output").textContent = "Hello, World!";
+// <mark>jQuery CSS-style method</mark>: Tag for DOM selector, $('#output')
+$('#output').append('<br><b>Hello World Again!');  // br is break or new line, b is bold
+
+// Jupyter built in magic element for testing and convenience of development
+element.text("Hello, World!"); // element is output option as part of %%js magic
+element.append('<br><b>Hello World Again!');
+
+//alert("Hello, World!");
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="multiple-outputs-using-one-variable">multiple outputs using one variable<a class="anchor-link" href="#multiple-outputs-using-one-variable"> </a></h3><p>This second example is a new <mark>sequence of code</mark>, two or more lines of code forms a sequence.  This example defines a variable, thank goodness!!! In the previous example we were typing the string <code>"Hello, World" over and over</code>.  Observe with the variable <code>msg="Hello, World!";</code> we type the string once and now use <code>msg</code> over and over.</p>
+<ul>
+<li>The variable "var msg =" is used to capture the data</li>
+<li>The console.log(msg) outputs to console, be sure to Inspect it!</li>
+<li>The element.text() is part of Jupyter Notebooks and displays as output blow the code on this page. Until we build up some more interesting data for Web Site, we will not use be using the Python HTML, CSS technique.</li>
+<li>The alert(msg) works the same as previous, but as the other commands uses msg as parameter.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Variable Definition&quot;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+
+<span class="c1">// Use msg to output code to Console and Jupyter Notebook</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>  <span class="c1">//right click browser select Inspect, then select Console to view</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+<span class="c1">//alert(msg);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="93ab790b-4220-4873-8561-fefaded34718"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#93ab790b-4220-4873-8561-fefaded34718');
+console.log("Variable Definition");
+
+var msg = "Hello, World!";
+
+// Use msg to output code to Console and Jupyter Notebook
+console.log(msg);  //right click browser select Inspect, then select Console to view
+element.text(msg);
+//alert(msg);
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="output-showing-use-of-a-function">output showing use of a function<a class="anchor-link" href="#output-showing-use-of-a-function"> </a></h3><p>This example passes the defined variable "msg" to the newly defined "function logIt(output)".</p>
+<ul>
+<li>There are multiple steps in this code..<ul>
+<li>The "definition of the function": "function logIt(output) {}" and everything between curly braces is the definitions of the function. Passing a parameter is required when you call this function.</li>
+<li>The "call to the function:"logIt(msg)" is the call to the function, this actually runs the function.  The variable "msg" is used a parameter when calling the logIt function.</li>
+</ul>
+</li>
+<li>Showing reuse of function...<ul>
+<li>There are two calls to the logIt function</li>
+<li>This is called Prodedural Abstraction, a term that means reusing the same code</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Function Definition&quot;</span><span class="p">);</span>
+
+<span class="cm">/* Function: logIt</span>
+<span class="cm"> * Parameter: output</span>
+<span class="cm"> * Description: The parameter is &quot;output&quot; to console and jupyter page</span>
+<span class="cm">*/</span>
+<span class="kd">function</span> <span class="nx">logIt</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">);</span> 
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">output</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="c1">//alert(output);</span>
+<span class="p">}</span>
+
+<span class="c1">// First sequence calling logIt function</span>
+<span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+
+<span class="c1">// Second sequence calling logIt function</span>
+<span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">&quot;Hello, &lt;b&gt;Students&lt;/b&gt;!&quot;</span> <span class="c1">// replaces content of variable</span>
+<span class="kd">var</span> <span class="nx">classOf</span> <span class="o">=</span> <span class="s2">&quot;Welcome CS class of 2023-2024.&quot;</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="nx">msg</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">+</span> <span class="nx">classOf</span><span class="p">);</span> <span class="c1">// concatenation of strings</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="4b15329c-2639-4fda-8c02-64a697f87666"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#4b15329c-2639-4fda-8c02-64a697f87666');
+console.log("Function Definition");
+
+/* Function: logIt
+ * Parameter: output
+ * Description: The parameter is "output" to console and jupyter page
+*/
+function logIt(output) {
+    console.log(output); 
+    element.append(output + "<br>");
+    //alert(output);
+}
+
+// First sequence calling logIt function
+var msg = "Hello, World!";
+logIt(msg);
+
+// Second sequence calling logIt function
+var msg = "Hello, <b>Students</b>!" // replaces content of variable
+var classOf = "Welcome CS class of 2023-2024."
+logIt(msg + "  " + classOf); // concatenation of strings
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="output-showing-Loosely-typed-data">output showing Loosely typed data<a class="anchor-link" href="#output-showing-Loosely-typed-data"> </a></h3><p><mark>JavaScript is a loosely typed language</mark>, meaning you don't have to specify what type of information will be stored in a variable in advance.</p>
+<ul>
+<li>To define a variable you prefix the name with <mark>var or const</mark>.   The variable type is determined by JavaScript at runtime.</li>
+<li>Python and many interpretive languages are loosely typed like JavaScript.  This is considered programmer friendly.  </li>
+<li>Java which is a compiled language is strongly typed, thus you will see terms like <mark>String, Integer, Double, and Object</mark> in the source code. </li>
+<li>In JavaScript, the <mark>typeof keyword</mark> returns the type of the variable.  Become familiar with type as it is valuable in conversation and knowing type help you understand how to modify data.  Each variable type will have built in methods to manage content within the data type.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Examine Data Types&quot;</span><span class="p">);</span>
+
+<span class="c1">// Function to add typeof to output</span>
+<span class="kd">function</span> <span class="nx">getType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">typeof</span> <span class="nx">output</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nx">output</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Function defintion</span>
+<span class="kd">function</span> <span class="nx">logIt</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getType</span><span class="p">(</span><span class="nx">output</span><span class="p">));</span>  <span class="c1">// logs string</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">output</span><span class="p">);</span>          <span class="c1">// logs object</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">getType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>  <span class="c1">// adds to Jupyter output</span>
+    <span class="c1">//alert(getType(output));</span>
+<span class="p">}</span>
+
+<span class="c1">// Common Types</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Common Types &lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="s2">&quot;Mr M&quot;</span><span class="p">);</span> <span class="c1">// String</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="mf">1997</span><span class="p">);</span>    <span class="c1">// Number</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>    <span class="c1">// Boolean</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+
+<span class="c1">// Object Type, this definition is often called a array or list</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Object Type, array &lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">scores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">90</span><span class="p">,</span>
+    <span class="mf">80</span><span class="p">,</span> 
+    <span class="mf">100</span>
+<span class="p">];</span>  
+<span class="nx">logIt</span><span class="p">(</span><span class="nx">scores</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+
+<span class="c1">// Complex Object, this definition is often called hash, map, hashmap, or dictionary</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Object Type, hash or dictionary &lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// key:value pairs seperated by comma</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Mr M&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;role&quot;</span><span class="o">:</span> <span class="s2">&quot;Teacher&quot;</span>
+<span class="p">};</span> 
+<span class="nx">logIt</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span>
+<span class="nx">logIt</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">person</span><span class="p">));</span>  <span class="c1">//method used to convert this object into readable format</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="3b0744af-0dac-4bac-a69e-c50a687d6b15"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#3b0744af-0dac-4bac-a69e-c50a687d6b15');
+console.log("Examine Data Types");
+
+// Function to add typeof to output
+function getType(output) {
+    return typeof output + ": " + output;
+}
+
+// Function defintion
+function logIt(output) {
+    console.log(getType(output));  // logs string
+    console.info(output);          // logs object
+    element.append(getType(output) + "<br>");  // adds to Jupyter output
+    //alert(getType(output));
+}
+
+// Common Types
+element.append("Common Types <br>");
+logIt("Mr M"); // String
+logIt(1997);    // Number
+logIt(true);    // Boolean
+element.append("<br>");
+
+// Object Type, this definition is often called a array or list
+element.append("Object Type, array <br>");
+var scores = [
+    90,
+    80, 
+    100
+];  
+logIt(scores);
+element.append("<br>");
+
+// Complex Object, this definition is often called hash, map, hashmap, or dictionary
+element.append("Object Type, hash or dictionary <br>");
+var person = { // key:value pairs seperated by comma
+    "name": "Mr M", 
+    "role": "Teacher"
+}; 
+logIt(person);
+logIt(JSON.stringify(person));  //method used to convert this object into readable format
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Build-a-Person-object-and-JSON">Build a Person object and JSON<a class="anchor-link" href="#Build-a-Person-object-and-JSON"> </a></h3><p>JavaScript and other languages have special properties and syntax to store and represent data.  In fact, a class in JavaScript is a special function.</p>
+<ul>
+<li><mark>Definition of class allows for a collection of data</mark>, the "class Person" allows programmer to retain name, github id, and class of a Person.</li>
+<li><mark>Instance of a class</mark>, the "const teacher = new Person("Mr M", "jm1021", 1977)" makes an object "teacher" which is an object representation of "class Person".</li>
+<li><mark>Setting and Getting properties</mark> After creating teacher and student objects, observe that properties can be changed/muted or extracted/accessed.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="c">&lt;!-- load jQuery and tablesorter scripts --&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- load jQuery and DataTables syle and scripts --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+            <span class="c">/* CSS-style selector maps to table id or other id&#39;s in HTML */</span>
+            <span class="p">#</span><span class="nn">jsonTable</span><span class="o">,</span> <span class="p">#</span><span class="nn">flaskTable</span> <span class="p">{</span>
+                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#353b45</span><span class="p">;</span>
+                <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+                <span class="k">border</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
+                <span class="k">box-shadow</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span> <span class="mf">0.4</span><span class="kt">em</span> <span class="mf">0.4</span><span class="kt">em</span> <span class="kc">grey</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Table for writing and extracting jsonText --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;jsonTable&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Classroom JSON Data<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;jsonText&quot;</span><span class="p">&gt;</span>{&quot;classroom&quot;:[{&quot;type&quot;:&quot;object&quot;,&quot;name&quot;:&quot;sample&quot;,&quot;ghID&quot;:&quot;sample&quot;,&quot;classOf&quot;:2000,&quot;role&quot;:&quot;sample&quot;}]}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<!-- load jQuery and tablesorter scripts -->
+<html>
+    <head>
+        <!-- load jQuery and DataTables syle and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <style>
+            /* CSS-style selector maps to table id or other id's in HTML */
+            #jsonTable, #flaskTable {
+                background-color: #353b45;
+                padding: 10px;
+                border: 3px solid #ccc;
+                box-shadow: 0.8em 0.4em 0.4em grey;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Table for writing and extracting jsonText -->
+        <table id="jsonTable">
+            <thead>
+                <tr>
+                    <th>Classroom JSON Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="jsonText">{"classroom":[{"type":"object","name":"sample","ghID":"sample","classOf":2000,"role":"sample"}]}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Person objects&quot;</span><span class="p">);</span>
+
+<span class="cm">/* class: Person</span>
+<span class="cm"> * Description: A collection of Person data</span>
+<span class="cm">*/</span>
+<span class="kr">class</span> <span class="nx">Person</span> <span class="p">{</span>
+  <span class="cm">/* method: constructor</span>
+<span class="cm">   * parameters: name, ghID - GitHub ID, classOf - Graduation Class </span>
+<span class="cm">   * description: returns object when &quot;new Person()&quot; is called with matching parameters</span>
+<span class="cm">   * assignment: this.name, this.ghID, ... are properties retained in the returned object</span>
+<span class="cm">   * default: role uses a default property, it is set to &quot;Student&quot;</span>
+<span class="cm">  */</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">=</span><span class="s2">&quot;Student&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">=</span> <span class="nx">ghID</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">=</span> <span class="nx">classOf</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="nx">role</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* method: setter</span>
+<span class="cm">   * parameters: role - role in classroom</span>
+<span class="cm">   * description: this.role is updated from default value to value contained in role parameter</span>
+<span class="cm">  */</span>
+  <span class="nx">setRole</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="nx">role</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="cm">/* method: getter</span>
+<span class="cm">   * description: turns properties of object into JSON object</span>
+<span class="cm">   * return value: JSON object</span>
+<span class="cm">  */</span>
+  <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="k">typeof</span> <span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* method: logIT</span>
+<span class="cm">   * description: &quot;this&quot; Person object is logged to console</span>
+<span class="cm">  */</span>
+  <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//Person Object</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="c1">//Log to Jupter</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Person object in JSON &lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>  
+    <span class="c1">//alert(this.getJSON());</span>
+  <span class="p">}</span>
+    
+<span class="p">}</span>
+
+<span class="c1">// make a new Person Object</span>
+<span class="kr">const</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Mr M&quot;</span><span class="p">,</span> <span class="s2">&quot;jm1021&quot;</span><span class="p">,</span> <span class="mf">1977</span><span class="p">);</span> <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="c1">// update role to Teacher</span>
+<span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">&quot;Teacher&quot;</span><span class="p">);</span> <span class="c1">// set the role</span>
+<span class="nx">teacher</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>  <span class="c1">// log to console</span>
+
+<span class="c1">// make a new Person Object</span>
+<span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span> <span class="s2">&quot;jane&quot;</span><span class="p">,</span> <span class="mf">2007</span><span class="p">);</span> <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span> <span class="c1">// log to console</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="1ad56564-b32a-46af-ba82-279e5199d2b4"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#1ad56564-b32a-46af-ba82-279e5199d2b4');
+console.log("Person objects");
+
+/* class: Person
+ * Description: A collection of Person data
+*/
+class Person {
+  /* method: constructor
+   * parameters: name, ghID - GitHub ID, classOf - Graduation Class 
+   * description: returns object when "new Person()" is called with matching parameters
+   * assignment: this.name, this.ghID, ... are properties retained in the returned object
+   * default: role uses a default property, it is set to "Student"
+  */
+  constructor(name, ghID, classOf, role="Student") {
+    this.name = name;
+    this.ghID = ghID;
+    this.classOf = classOf;
+    this.role = role;
+  }
+
+  /* method: setter
+   * parameters: role - role in classroom
+   * description: this.role is updated from default value to value contained in role parameter
+  */
+  setRole(role) {
+    this.role = role;
+  }
+  
+  /* method: getter
+   * description: turns properties of object into JSON object
+   * return value: JSON object
+  */
+  getJSON() {
+    const obj = {type: typeof this, name: this.name, ghID: this.ghID, classOf: this.classOf, role: this.role};
+    const json = JSON.stringify(obj);
+    return json;
+  }
+
+  /* method: logIT
+   * description: "this" Person object is logged to console
+  */
+  logIt() {
+    //Person Object
+    console.info(this);
+    //Log to Jupter
+    element.append("Person object in JSON <br>");
+    element.append(this.getJSON() + "<br>");  
+    //alert(this.getJSON());
+  }
+    
+}
+
+// make a new Person Object
+const teacher = new Person("Mr M", "jm1021", 1977); // object type is easy to work with in JavaScript
+// update role to Teacher
+teacher.setRole("Teacher"); // set the role
+teacher.logIt();  // log to console
+
+// make a new Person Object
+const student = new Person("Jane Doe", "jane", 2007); // object type is easy to work with in JavaScript
+student.logIt(); // log to console
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Build-a-Classroom-Array/List-of-Persons-and-JSON">Build a Classroom Array/List of Persons and JSON<a class="anchor-link" href="#Build-a-Classroom-Array/List-of-Persons-and-JSON"> </a></h3><p>Many key elements are shown again.  New elements include...</p>
+<ul>
+<li><mark>Building an Array</mark>, "var students" is an array of many persons</li>
+<li>Building a Classroom, this show <mark>forEach iteration</mark> through an array and <mark>.push adding</mark> to an array.  These are key concepts in all programming languages.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="kr">class</span> <span class="nx">Premier</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">team</span><span class="p">,</span> <span class="nx">ranking</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">team</span> <span class="o">=</span> <span class="nx">team</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rankig</span> <span class="o">=</span> <span class="nx">ranking</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">jsonString</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+      <span class="nx">team</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">team</span><span class="p">,</span>
+      <span class="nx">ranking</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ranking</span><span class="p">,</span>
+     
+    <span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">jsonObj</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">jsonObj</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">Playerdata</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Erling Haaland&quot;</span><span class="p">,</span>
+  <span class="nx">team</span><span class="o">:</span> <span class="s2">&quot;Manchester City&quot;</span><span class="p">,</span>
+  <span class="nx">ranking</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>   
+<span class="p">};</span>
+
+
+<span class="kr">const</span> <span class="nx">js</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Premier</span><span class="p">(</span>
+  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">team</span><span class="p">,</span>
+  <span class="nx">Playerdata</span><span class="p">.</span><span class="nx">ranking</span>
+<span class="p">);</span>
+
+<span class="nx">js</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="55fe087d-e422-42c3-ac49-bd7e0f27def4"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#55fe087d-e422-42c3-ac49-bd7e0f27def4');
+class Premier {
+  constructor(name, team, ranking) {
+    this.name = name;
+    this.team = team;
+    this.rankig = ranking;
+  }
+
+  getJSON() {
+    const jsonString = {
+      name: this.name,
+      team: this.team,
+      ranking: this.ranking,
+     
+    };
+    const jsonObj = JSON.stringify(jsonString);
+    return jsonObj;
+  }
+
+  logIt() {
+    console.info(this);
+    element.append(this.getJSON());
+  }
+}
+
+const Playerdata = {
+  name: "Erling Haaland",
+  team: "Manchester City",
+  ranking: 1,   
+};
+
+
+const js = new Premier(
+  Playerdata.name,
+  Playerdata.team,
+  Playerdata.ranking
+);
+
+js.logIt();
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="for-loop-to-generate-Table-Rows-in-HTML-output">for loop to generate Table Rows in HTML output<a class="anchor-link" href="#for-loop-to-generate-Table-Rows-in-HTML-output"> </a></h3><p>This code extracts JSON text from HTML, that was placed in DOM in an earlier JavaScript cell, then it parses text into a JavaScript object.  In addition, there is a for loop that iterates over the extracted object generating formated rows and columns in an HTML table.</p>
+<ul>
+<li>Table generation is broken into parts...<ul>
+<li>table data is obtained from a classroom array inside of the extracted object.  </li>
+<li>the JavaScript for loop allows the construction of a new row of data for each Person hash object inside of the the Array.</li>
+<li>in the loop a table row <code>&lt;tr&gt; ... &lt;/tr&gt;</code> is created for each Hash object in the Array.</li>
+<li>in the loop table data, a table column, <code>&lt;td&gt; ... &lt;/td&gt;</code> is created for name, ghID, classOf, and role within the Hash object.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="c">&lt;!-- load jQuery and tablesorter scripts --&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- load jQuery and DataTables syle and scripts --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;jsonTable&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>NBA PLAYER JSON Data<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;jsonText&quot;</span><span class="p">&gt;</span>{
+                        &quot;player&quot;: [
+                          {
+                            &quot;name&quot;: &quot;Erling Haaland&quot;,
+                            &quot;team&quot;: &quot;Los Angeles Lakers&quot;,
+                            &quot;ranking&quot;: 1,
+                          },
+                          {
+                            &quot;name&quot;: &quot;Harry Kane&quot;,
+                            &quot;team&quot;: &quot;Tottenham&quot;,
+                            &quot;ranking&quot;: 4,
+                          },
+                        ]
+                      }
+                      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<!-- load jQuery and tablesorter scripts -->
+<html>
+    <head>
+        <!-- load jQuery and DataTables syle and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    </head>
+
+    <body>
+        <table id="jsonTable">
+            <thead>
+                <tr>
+                    <th>NBA PLAYER JSON Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="jsonText">{
+                        "player": [
+                          {
+                            "name": "Erling Haaland",
+                            "team": "Los Angeles Lakers",
+                            "ranking": 1,
+                          },
+                          {
+                            "name": "Harry Kane",
+                            "team": "Tottenham",
+                            "ranking": 4,
+                          },
+                        ]
+                      }
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+# defines the tableID that is going to be referred to in the future
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;premierleague&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        # these are the sortTable functions for each of the columns. the onclick allows for on click of the table header. 
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;name&#39;)&quot;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;team&#39;)&quot;</span><span class="p">&gt;</span>Team<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;goals per game&#39;)&quot;</span><span class="p">&gt;</span>Goals Per Game<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;games played&#39;)&quot;</span><span class="p">&gt;</span>Games Played<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;height&#39;)&quot;</span><span class="p">&gt;</span>Height (inches)<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;passes&#39;)&quot;</span><span class="p">&gt;</span>Passess<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;ranking&#39;)&quot;</span><span class="p">&gt;</span>Ranking<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTable(&#39;weight&#39;)&quot;</span><span class="p">&gt;</span>Weight<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+   # sample data following on frontend, just for demo.
+      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Erling Haaland<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester City<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>88<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>44<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>180<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kevin De Bruyne<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Manchester City<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>81<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>56<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>179<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+  
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="c1">// sortTable function meant to sort based on each column header.</span>
+    <span class="kd">function</span> <span class="nx">getColumnIndex</span><span class="p">(</span><span class="nx">columnName</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// each column name is taken in columnName to get its index.</span>
+      <span class="kr">const</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;premierleague&#39;</span><span class="p">);</span>
+      <span class="kr">const</span> <span class="nx">headerRow</span> <span class="o">=</span> <span class="nx">table</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+      <span class="c1">// contains the column headers, index 0</span>
+      <span class="kr">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">headerRow</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">));</span>
+      <span class="k">return</span> <span class="nx">headers</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">header</span> <span class="p">=&gt;</span> <span class="nx">header</span><span class="p">.</span><span class="nx">innerText</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="nx">columnName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+      <span class="c1">// converts column header names to lowercase to account for sortTable definitions</span>
+    <span class="p">}</span>
+    
+<span class="kd">function</span> <span class="nx">sortTable</span><span class="p">(</span><span class="nx">columnName</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;premierleague&#39;</span><span class="p">);</span>
+  <span class="c1">// constant calls the tableID that was previously defined</span>
+  <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">table</span><span class="p">.</span><span class="nx">tBodies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">));</span>
+  <span class="kr">const</span> <span class="nx">headerRow</span> <span class="o">=</span> <span class="nx">table</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+  <span class="kr">const</span> <span class="nx">isAscending</span> <span class="o">=</span> <span class="o">!</span><span class="nx">headerRow</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;asc&#39;</span><span class="p">);</span>
+      <span class="c1">// this is a very important line - the asc class helps the function decide whether or not the column is going to be sorted in increasing order or decreasing order.</span>
+
+     <span class="nx">rows</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">rowA</span><span class="p">,</span> <span class="nx">rowB</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">cellA</span> <span class="o">=</span> <span class="nx">rowA</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`td:nth-child(</span><span class="si">${</span><span class="nx">getColumnIndex</span><span class="p">(</span><span class="nx">columnName</span><span class="p">)</span><span class="si">}</span><span class="sb">)`</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">cellB</span> <span class="o">=</span> <span class="nx">rowB</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`td:nth-child(</span><span class="si">${</span><span class="nx">getColumnIndex</span><span class="p">(</span><span class="nx">columnName</span><span class="p">)</span><span class="si">}</span><span class="sb">)`</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+    <span class="c1">// the nth-child selector is different from normal JS arrays, these have an index starting at 1 rather than 0</span>
+    <span class="c1">// the rows are sorted based on the column. getColumnIndex is used to get the index of the column. </span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">columnName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;name&#39;</span> <span class="o">||</span> <span class="nx">columnName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;team&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">isAscending</span> <span class="o">?</span> <span class="nx">cellA</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">cellB</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensitivity</span><span class="o">:</span> <span class="s1">&#39;base&#39;</span> <span class="p">})</span> <span class="o">:</span> <span class="nx">cellB</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">cellA</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">sensitivity</span><span class="o">:</span> <span class="s1">&#39;base&#39;</span> <span class="p">});</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// these were for special situations. the name and team columns were not sorting properly, so the localeCompare was used to sort the rows alphabetically. </span>
+
+    <span class="c1">// Convert the cell values to numbers for the &quot;Games Played&quot; column</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">columnName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;games played&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cellA</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">cellA</span><span class="p">);</span>
+      <span class="nx">cellB</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">cellB</span><span class="p">);</span>
+    <span class="p">}</span>
+     <span class="c1">// games played was not sorting for some odd reason, which is why this if statement was added.</span>
+    <span class="c1">// purpose is to parse the values as an integer and then sort numerically. </span>
+    
+    <span class="k">return</span> <span class="nx">isAscending</span> <span class="o">?</span> <span class="nx">cellA</span> <span class="o">-</span> <span class="nx">cellB</span> <span class="o">:</span> <span class="nx">cellB</span> <span class="o">-</span> <span class="nx">cellA</span><span class="p">;</span>
+  <span class="p">});</span>
+  <span class="c1">// The code that follows: Will add the cell values into their sepecified table.</span>
+  <span class="nx">rows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">row</span> <span class="p">=&gt;</span> <span class="nx">table</span><span class="p">.</span><span class="nx">tBodies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">row</span><span class="p">));</span>
+  <span class="nx">headerRow</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;asc&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+# defines the tableID that is going to be referred to in the future
+<table id="premierleague">
+    <thead>
+      <tr>
+        # these are the sortTable functions for each of the columns. the onclick allows for on click of the table header. 
+        <th onclick="sortTable('name')">Name</th>
+        <th onclick="sortTable('team')">Team</th>
+        <th onclick="sortTable('goals per game')">Goals Per Game</th>
+        <th onclick="sortTable('games played')">Games Played</th>
+        <th onclick="sortTable('height')">Height (inches)</th>
+        <th onclick="sortTable('passes')">Passess</th>
+        <th onclick="sortTable('ranking')">Ranking</th>
+        <th onclick="sortTable('weight')">Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+   # sample data following on frontend, just for demo.
+      <tr>
+        <td>Erling Haaland</td>
+        <td>Manchester City</td>
+        <td>2</td>
+        <td>35</td>
+        <td>88</td>
+        <td>5</td>
+        <td>44</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>Player1</td>
+        <td>Manchester City</td>
+        <td>3</td>
+        <td>33</td>
+        <td>81</td>
+        <td>7</td>
+        <td>56</td>
+        <td>179</td>
+      </tr>
+  &lt;/table&gt;
+  
+  <script>
+    // sortTable function meant to sort based on each column header.
+    function getColumnIndex(columnName) {
+      // each column name is taken in columnName to get its index.
+      const table = document.getElementById('premierleague');
+      const headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
+      // contains the column headers, index 0
+      const headers = Array.from(headerRow.getElementsByTagName('th'));
+      return headers.findIndex(header => header.innerText.toLowerCase() === columnName.toLowerCase()) + 1;
+      // converts column header names to lowercase to account for sortTable definitions
+    }
+    
+function sortTable(columnName) {
+  const table = document.getElementById('premierleague');
+  // constant calls the tableID that was previously defined
+  const rows = Array.from(table.tBodies[0].getElementsByTagName('tr'));
+  const headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
+  const isAscending = !headerRow.classList.contains('asc');
+      // this is a very important line - the asc class helps the function decide whether or not the column is going to be sorted in increasing order or decreasing order.
+
+     rows.sort((rowA, rowB) => {
+    let cellA = rowA.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
+    let cellB = rowB.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
+    // the nth-child selector is different from normal JS arrays, these have an index starting at 1 rather than 0
+    // the rows are sorted based on the column. getColumnIndex is used to get the index of the column. 
+
+    if (columnName.toLowerCase() === 'name' || columnName.toLowerCase() === 'team') {
+      return isAscending ? cellA.localeCompare(cellB, undefined, { sensitivity: 'base' }) : cellB.localeCompare(cellA, undefined, { sensitivity: 'base' });
+    }
+    
+    // these were for special situations. the name and team columns were not sorting properly, so the localeCompare was used to sort the rows alphabetically. 
+
+    // Convert the cell values to numbers for the "Games Played" column
+    if (columnName.toLowerCase() === 'games played') {
+      cellA = parseInt(cellA);
+      cellB = parseInt(cellB);
+    }
+     // games played was not sorting for some odd reason, which is why this if statement was added.
+    // purpose is to parse the values as an integer and then sort numerically. 
+    
+    return isAscending ? cellA - cellB : cellB - cellA;
+  });
+  
+  rows.forEach(row => table.tBodies[0].appendChild(row));
+  headerRow.classList.toggle('asc');
+  // this is meant for after sorting. after the sorting is done, the appendChild is meant to append these cell values back into the specified table.
+}
+
+  </script>
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="c">&lt;!-- load jQuery and tablesorter scripts --&gt;</span>
+<span class="c">&lt;!-- this doesn&#39;t work in jupyter but will work in GitHub pages --&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- load jQuery and DataTables syle and scripts --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css&quot;</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;https://code.jquery.com/jquery-3.5.1.js&quot;&gt;&lt;/script&gt;--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Loading table data&quot;</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#premierleague&#39;</span><span class="p">).</span><span class="nx">DataTable</span><span class="p">({</span>
+                <span class="c1">// read data from the ajax request</span>
+                <span class="nx">ajax</span><span class="o">:</span> <span class="s1">&#39;https://tri3dev.duckdns.org/api/premierleagueplayer/&#39;</span><span class="p">,</span>
+                <span class="c1">// use follow columns </span>
+                <span class="nx">columns</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;name&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;team&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;position&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;jersey_number&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;age&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;height&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;weight&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;goals&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;assists&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;yellow_cards&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;red_cards&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;passes_completed&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;tackles&quot;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;clean_sheets&quot;</span><span class="p">}]</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="c">&lt;!--defines the tableID that is going to be referred to in the future--&gt;</span>
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;premierleague&quot;</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- no need to define table header here, DataTable will take care of it --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<!-- load jQuery and tablesorter scripts -->
+<!-- this doesn't work in jupyter but will work in GitHub pages -->
+<html>
+    <head>
+        <!-- load jQuery and DataTables syle and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+    <!--<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.noConflict();
+            console.log("Loading table data");
+            $('#premierleague').DataTable({
+                // read data from the ajax request
+                ajax: 'https://tri3dev.duckdns.org/api/premierleagueplayer/',
+                // use follow columns 
+                columns: [{"title":"name"},
+                    {"title":"team"},
+                    {"title":"position"},
+                    {"title":"jersey_number"},
+                    {"title":"age"},
+                    {"title":"height"},
+                    {"title":"weight"},
+                    {"title":"goals"},
+                    {"title":"assists"},
+                    {"title":"yellow_cards"},
+                    {"title":"red_cards"},
+                    {"title":"passes_completed"},
+                    {"title":"tackles"},
+                    {"title":"clean_sheets"}]
+            });
+        });
+  </script>
+    
+    </head>
+
+    <body>
+<!--defines the tableID that is going to be referred to in the future-->
+<table id="premierleague">
+<!-- no need to define table header here, DataTable will take care of it -->
+</table>
+
+</body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><blockquote><p>One key to these hacks is to build confidence with me going into final grade, I would like to see each student adapt this frontend work in their final project.  Second key is the finished work can serve as review for the course, notes for the future in relationship to frontend.</p>
+<ul>
+<li>Adapt this tutorial to your own work</li>
+<li>Consider what you need to work on to be stronger developer</li>
+<li>Show something creative or unique, no cloning</li>
+<li>Be ready to talk to Teacher for 5 to 10 minutes. Individually!!!</li>
+<li>Show in Jupyter Notebook during discussion, show Theme and ChatGPT</li>
+<li>Have a runtime final in GithHub Pages (or Fastpage)</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+&lt;/div&gt;
+ 
+
+</tbody></table></div></div></div></div></div></div>
+
+
+  </div><a class="u-url" href="/devops/techtalk/javascript" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devops/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://tri3devopteam.github.io/devops/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devops/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>devops guide for APCSP (no one will notice I changed the description anyways so im just gonna say im cool)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
